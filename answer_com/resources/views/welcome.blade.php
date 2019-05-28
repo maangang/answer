@@ -257,7 +257,7 @@
 </div>
 <div class="exam_card_body">
 <div>
-<a href="{{url('order')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
+<a href="{{url('orders')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
 <a href="http://mnks.jxedt.com/ckm1/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
 </div>
 <div>

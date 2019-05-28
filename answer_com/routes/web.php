@@ -15,4 +15,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('examList','Exam@examList');
-Route::view('order','order');
+Route::view('orders','order');
