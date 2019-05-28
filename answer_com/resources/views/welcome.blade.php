@@ -1,46 +1,44 @@
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-        <title>秋名山驾照考核</title>
-        <link rel="shortcut icon" type="image/x-icon" href="http://img.58cdn.com.cn/jxedt/logos/favicon.ico">    <meta charset="UTF-8">
+    <title>秋名山驾照考核</title>
+    <link rel="shortcut icon" type="image/x-icon" href="http://img.58cdn.com.cn/jxedt/logos/favicon.ico">
+    <meta charset="UTF-8">
     <meta name="baidu-site-verification" content="JU12JdpLM3">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/reset.css">
-    <!--<link rel="stylesheet" href="//j1.58cdn.com.cn/dist/jxedt/pc/lib/swiper/swiper-3.4.2.min.css">-->
-    <link rel="stylesheet" href="./css/idangerous.css">
+    <link rel="stylesheet" href="./css/reset.css">{{--搜索类型的控制--}}
+    <link rel="stylesheet" href="./css/comm_style.css">{{--大图上所有导航栏样式--}}
+    <link rel="stylesheet" href="./css/idangerous.css">{{--大图展示--}}
+    {{--<link rel="stylesheet" href="./css/font_949786_v8zsbvaxz6p.css">--}}
 </head>
-<body>
-<link rel="stylesheet" href="./css/comm_style.css">
-<link rel="stylesheet" href="./css/font_949786_v8zsbvaxz6p.css">
 <style>
     .comment-header-vip-describe .jxedt-VIP{
         font-size: 14px;
         color: #00c356;
     }
 </style>
+<body>
+
 <div class="nav-wrap">
     <nav class="comment-header-nav">
-        <!-- 联系 -->
+<!-- 联系 -->
         <div class="comment-header-contact">
             <div class="comment-header-left">
-                <!--<span class="VTargetSpan"></span>-->
-                <!--<img class="comment-header-vip-img" src="" alt="">-->
                 <span class="comment-header-vip-describe">
                     <i class="iconfont jxedt-VIP"></i>
-                    <a href="http://vip.jxedt.com/" onclick="clickLog('from=JXEDT_HEADER_VIP')">VIP真题</a>
+                    <a href="" onclick="clickLog('from=JXEDT_HEADER_VIP')">VIP真题</a>
                 </span>
                 <span class="comment-header-phone-describe">秋名山驾照考核热线:
-                    <span class="comment-header-phone">0315-7955936</span>
+                    <span class="comment-header-phone">0315-666666</span>
                 </span>
-                                <div class="comment-login-1" style="display:inline-block;">
-                    <!--<span id="getdate"></span>-->
+                <div class="comment-login-1" style="display:inline-block;">
                     <span class="btn-span"><a href="http://user.jxedt.com/home/login" onclick="clickLog('from=JXEDT_HEADER_LOGIN')">登录</a></span>
                     <span class="btn-span"><a href="http://user.jxedt.com/registerNew/xy" target="_blank" onclick="clickLog('from=JXEDT_HEADER_SIGNIN')">注册</a></span>
                 </div>
-                            </div>
-        
+           </div>
         </div>
-        <!-- 搜索 -->
+
+<!-- 搜索 -->
         <div class=" comment-header-search">
             <div class="comment-header-search-logo">
                 <a href="http://www.jxedt.com/">
@@ -101,6 +99,7 @@
                 <span class="comment-header-search-btn" onclick="clickLog('from=JXEDT_HTAB_SEARCH')">搜索</span>
             </div>
         </div>
+
         <!-- 导航 -->
         <div>
             <div class="comment-header-menu">
@@ -606,14 +605,9 @@ top: 80px !important;
     </div>
 </footer>
 
-
 <link rel="stylesheet" href="./image/bootstrap.css">
 <link rel="stylesheet" href="./image/comm_style.css">
 <link rel="stylesheet" href="./image/footer.css">
-
-
-
-
 
 <script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"footer","page":"info"}'</script><script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"header","page":"info"}'</script><script src="./image/hm.txt"></script><script src="./js/jquery.js"></script>
 <script src="./image/api"></script><script type="text/javascript" src="./image/getscript"></script>
@@ -664,4 +658,5 @@ top: 80px !important;
 
 <script src="./js/idangerous.js"></script>
 <script src="./js/jxindex.js"></script>
-</body></html>
+</body>
+</html>
