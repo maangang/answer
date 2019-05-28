@@ -17,8 +17,8 @@ class Exam extends Controller
     public function examList()
     {
         $ExamModel = new ExamModel;
-       var_dump($ExamModel->index());
-        //return view('examList');
+       //var_dump($ExamModel->index());
+        return view('examList');
     }
 
 
