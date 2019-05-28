@@ -9,15 +9,15 @@
     <meta name="mobile-agent" content="format=xhtml; url=http://m.jxedt.com/mnks/ckm1/sxlx/">
     <meta name="mobile-agent" content="format=html5; url=http://m.jxedt.com/mnks/ckm1/sxlx/">
     <meta name="mobile-agent" content="format=wml; url=http://m.jxedt.com/mnks/ckm1/sxlx/">
-    <link href="./orders/css/main.css" type="text/css" rel="stylesheet">
-    <script type="text/javascript" async="" src="./orders/js/auto_dup"></script>
-    <script src="./orders/js/hm.js"></script>
-    <script src="./orders/js/jquery-1.js"></script>
+    <link href="./order/css/main.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" async="" src="./order/js/auto_dup"></script>
+    <script src="./order/js/hm.js"></script>
+    <script src="./order/js/jquery-1.js"></script>
     <script>
-        var picPath = "./orders/image";
-        var cssPath = "./orders/css";
+        var picPath = "./order/image";
+        var cssPath = "./order/css";
     </script>
-    <link rel="preload" href="./orders/js/integrator.js" as="script"><script type="text/javascript" src="./orders/js/integrator.js"></script>
+    <link rel="preload" href="./order/js/integrator.js" as="script"><script type="text/javascript" src="./order/js/integrator.js"></script>
 </head>
 <body>
 
@@ -85,7 +85,7 @@
             <div class="lx_type" style="display: block;">单选题</div>
             <div class="box">
                 <div class="loading" id="wartingdiv" style="display: none;">
-                    <img src="./orders/image/loading.gif">
+                    <img src="./order/image/loading.gif">
                     加载中……
                 </div>
                 <div id="frm_main" style="display: block;">
@@ -130,9 +130,9 @@
     var kemuType = "1";
     var cookiename = "lx_sxlx_" + carType+"km"+kemuType+"_index";
 </script>
-<script src="./orders/js/common.js" type="text/javascript"></script>
-<script src="./orders/js/dialog.js" type="text/javascript"></script>
-<script src="./orders/js/lx.js" type="text/javascript"></script>     <script>
+<script src="./order/js/common.js" type="text/javascript"></script>
+<script src="./order/js/dialog.js" type="text/javascript"></script>
+<script src="./order/js/lx.js" type="text/javascript"></script>     <script>
     windowonload();
     function windowonload() {
         $$("quallcount").innerHTML = allcount;
@@ -163,7 +163,7 @@
 
 <script type="text/javascript">
     document.write('<script type="text/javascript" src="//track.58.com/adsys/jxedt_pcpagead?r='+ Math.random()+'"></scr'+'ipt>');
-</script><script type="text/javascript" src="./orders/js/jxedt_pcpagead.js"></script><script src="./orders/js/adsbygoogle.js" type="text/javascript"></script><script src="./orders/js/c.js" type="text/javascript"></script>
+</script><script type="text/javascript" src="./order/js/jxedt_pcpagead.js"></script><script src="./order/js/adsbygoogle.js" type="text/javascript"></script><script src="./order/js/c.js" type="text/javascript"></script>
 <script type="text/javascript">
     var _hmt = _hmt || [];
     (function() {
@@ -176,7 +176,7 @@
 <script>
     var _trackURL = "{'cate':'','area':'','channel':'other','pagetype':'sxlx'}";
 </script>
-<script src="./orders/js/referrer_jxedt_pc.js"></script>
+<script src="./order/js/referrer_jxedt_pc.js"></script>
 
 
 </body></html>
