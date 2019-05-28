@@ -89,17 +89,16 @@
                     加载中……
                 </div>
                 <div id="frm_main" style="display: block;">
-                    <h1 class="title"><span id="index">2</span>/<span id="totalcount">1334</span> &nbsp;
-                        <span id="t">机动车驾驶人违法驾驶造成重大交通事故构成犯罪的，依法追究什么责任？</span></h1>
-                    <input type="hidden" name="TrueRe" id="TrueRe">
-                    <input type="hidden" name="web_note_id" id="web_note_id">
-                    <div class="lx_item">
-                        <ul id="ul_answers"><li><input onclick="tjanswer('A','A','2');" type="radio" value="A" name="answer" id="answer1"><label for="answer1">A：刑事责任</label></li><li><input onclick="tjanswer('B','A','2');" type="radio" value="B" name="answer" id="answer2"><label for="answer2">B：民事责任</label></li><li><input onclick="tjanswer('C','A','2');" type="radio" value="C" name="answer" id="answer3"><label for="answer3">C：经济责任</label></li><li><input onclick="tjanswer('D','A','2');" type="radio" value="D" name="answer" id="answer4"><label for="answer4">D：直接责任</label></li></ul>
-                        <div class="right" id="qustionpic"></div>
-                    </div>
-                    <div class="clear"></div>
-                    <div class="chk_an"><span id="rightanswer" style="display: none; text-align: left; width: 100%;"><span class="an_result an_wrong">您答错了！标准答案是：B</span> <font class="an_why" '="" onclick="gototieba()">为什么选 B？</font></span></div>
-                    <div class="clear"></div>
+                    <h1 class="title"><span id="index"></span>/<span id="totalcount">1334</span> &nbsp;<span id="t"></span></h1>
+	            <input type="hidden" name="TrueRe" id="TrueRe">
+				<input type="hidden" name="web_note_id" id="web_note_id">
+	            <div class="lx_item">
+	                <ul id="ul_answers"></ul>
+	                <div class="right" id='qustionpic'></div>
+	            </div>
+	            <div class="clear"></div>
+	            <div class="chk_an"><span id="rightanswer" style="display: none"></span></div>   
+     			<div class="clear"></div>
                     <div class="btns">
                         <a href="javascript:void(0)" class="btn green" onclick="go(0)" title="按键盘 → 进入下一题">下一题</a><a href="javascript:void(0)" class="inp sp" id="sp_lxindex" style="display:none">2/1334</a>
                         <a href="javascript:void(0)" class="btn green" onclick="go(-1)" title="按键盘 ← 进入上一题">上一题</a>
