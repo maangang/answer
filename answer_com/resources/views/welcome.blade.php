@@ -257,7 +257,7 @@
 </div>
 <div class="exam_card_body">
 <div>
-<a href="http://mnks.jxedt.com/ckm1/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
+<a href="order" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
 <a href="http://mnks.jxedt.com/ckm1/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
 </div>
 <div>
@@ -605,9 +605,9 @@ top: 80px !important;
     </div>
 </footer>
 
-<link rel="stylesheet" href="./image/bootstrap.css">
-<link rel="stylesheet" href="./image/comm_style.css">
-<link rel="stylesheet" href="./image/footer.css">
+<link rel="stylesheet" href="./css/bootstrap.css">
+<link rel="stylesheet" href="./css/comm_style.css">
+<link rel="stylesheet" href="./css/footer.css">
 
 <script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"footer","page":"info"}'</script><script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"header","page":"info"}'</script><script src="./image/hm.txt"></script><script src="./js/jquery.js"></script>
 <script src="./image/api"></script><script type="text/javascript" src="./image/getscript"></script>
