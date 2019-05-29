@@ -9,7 +9,10 @@
     <link rel="stylesheet" href="./css/reset.css">{{--搜索类型的控制--}}
     <link rel="stylesheet" href="./css/comm_style.css">{{--大图上所有导航栏样式--}}
     <link rel="stylesheet" href="./css/idangerous.css">{{--大图展示--}}
-    {{--<link rel="stylesheet" href="./css/font_949786_v8zsbvaxz6p.css">--}}
+    <link rel="stylesheet" href="./css/bootstrap.css">{{--学车流程--}}
+    <link rel="stylesheet" href="./css/comm_style.css">{{--学车流程--}}
+    <link rel="stylesheet" href="./css/footer.css">{{--学车流程--}}
+    <link rel="stylesheet" href="./css/font_949786_v8zsbvaxz6p.css">{{--导航栏VIP命题--}}
 </head>
 <style>
     .comment-header-vip-describe .jxedt-VIP{
@@ -17,6 +20,13 @@
         color: #00c356;
     }
 </style>
+<!--[if IE 9]>
+<style type="text/css">
+    .rank_card_jx,.rank_card_jl,.rank_card_pl{
+        height:640px !important;
+    }
+</style>
+<![endif]-->
 <body>
 
 <div class="nav-wrap">
@@ -100,7 +110,7 @@
             </div>
         </div>
 
-        <!-- 导航 -->
+<!-- 导航 -->
         <div>
             <div class="comment-header-menu">
                 <ul class="comment-header-menu-ul">
@@ -157,19 +167,15 @@
                 </ul>
             </div>
         </div>
+
     </nav>
 </div>
+
 <div class="commonhead_line" style="border-top: 1px solid rgb(0, 195, 86); display: none;"></div>
 
 <link rel="stylesheet" href="./css/jx_index.css">
 <div class="home">
-    <!--[if IE 9]>
-    <style type="text/css">
-        .rank_card_jx,.rank_card_jl,.rank_card_pl{
-            height:640px !important;
-        }
-    </style>
-    <![endif]-->
+
     <div class="banner banner_top">
                 <div class="swiper-container-banner" style="display: block;">
             <div class="swiper-wrapper" style="width: 6076.8px; height: 360px; transform: translate3d(-3038.4px, 0px, 0px); transition-duration: 1s;"><div class="swiper-slide swiper-slide-duplicate" style="width: 1519.2px; height: 360px;">
@@ -203,7 +209,7 @@
                 <li class="km1li">
                     <a href="http://mnks.jxedt.com/ckm1/" target="_blank" onclick="clickLog('from=JXEDT_HOME_XCLC_KM1')">
                         <div class="km1"></div>
-                    <div>  
+                    <div>
                         <p>
                             科目一
                         </p>
@@ -247,315 +253,311 @@
             </ul>
         </div>
     </div>
+
     <!--小车考试-->
     <div class="car_s_exam">
-<div class="car_s_exam_context">
-<div class="title">小车理论考试</div>
-<div class="exam_card">
-<div class="exam_card_header">
-科目一交规
-</div>
-<div class="exam_card_body">
-<div>
-<a href="http://mnks.jxedt.com/ckm1/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
-<a href="http://mnks.jxedt.com/ckm1/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
-</div>
-<div>
-<a href="http://mnks.jxedt.com/ckm1/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_ZXLX')"><span>专项练习</span></a>
-<a href="http://mnks.jxedt.com/ckm1/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_CTLX')"><span>错题练习</span></a>
-</div>
-</div>
-<div class="exam_card_footer">
-<span>
-<a href="http://mnks.jxedt.com/ckm1/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_MNLX')">
-模拟考试
-</a>
-</span>
+        <div class="car_s_exam_context">
+                <div class="title">小车理论考试</div>
+            <div class="exam_card">
+                <div class="exam_card_header">科目一交规</div>
+            <div class="exam_card_body">
+            <div>
+            <a href="http://mnks.jxedt.com/ckm1/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
+            <a href="http://mnks.jxedt.com/ckm1/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
+            </div>
+            <div>
+            <a href="http://mnks.jxedt.com/ckm1/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_ZXLX')"><span>专项练习</span></a>
+            <a href="http://mnks.jxedt.com/ckm1/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_CTLX')"><span>错题练习</span></a>
+            </div>
+            </div>
+            <div class="exam_card_footer">
+            <span>
+            <a href="http://mnks.jxedt.com/ckm1/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_MNLX')">
+            模拟考试
+            </a>
+            </span>
 
-</div>
-</div>
-<div class="exam_card">
-<div class="exam_card_header">
-科目四安全文明驾驶
-</div>
-<div class="exam_card_body">
-<div>
-<a href="http://mnks.jxedt.com/ckm4/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SSLX')"><span>顺序练习</span></a>
-<a href="http://mnks.jxedt.com/ckm4/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SJLX')"><span>随机练习</span></a>
-</div>
-<div>
-<a href="http://mnks.jxedt.com/ckm4/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_ZXLX')"><span>专项练习</span></a>
-<a href="http://mnks.jxedt.com/ckm4/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_CTLX')"><span>错题练习</span></a>
-</div>
-</div>
-<div class="exam_card_footer">
-<span>
-<a href="http://mnks.jxedt.com/ckm4/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_MNLX')">
-模拟考试
-</a>
-</span>
-</div>
-</div>
-</div>
-</div>    <!--驾校教练排行-->
+            </div>
+            </div>
+            <div class="exam_card">
+                <div class="exam_card_header">
+                科目四安全文明驾驶
+                </div>
+                <div class="exam_card_body">
+                <div>
+                <a href="http://mnks.jxedt.com/ckm4/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SSLX')"><span>顺序练习</span></a>
+                <a href="http://mnks.jxedt.com/ckm4/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SJLX')"><span>随机练习</span></a>
+                </div>
+                <div>
+                <a href="http://mnks.jxedt.com/ckm4/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_ZXLX')"><span>专项练习</span></a>
+                <a href="http://mnks.jxedt.com/ckm4/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_CTLX')"><span>错题练习</span></a>
+                </div>
+                </div>
+                <div class="exam_card_footer">
+                    <span><a href="http://mnks.jxedt.com/ckm4/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_MNLX')">模拟考试</a></span>
+                </div>
+            </div>
+        </div>
+    </div>    <!--驾校教练排行-->
 
         <!--学车互动-->
  <div class="learn_interact">
-<h3>学车互动</h3>
-<!-- 学车互动列表 -->
-<div class="learn_interact_list">
-<div class="swiper-container">
-<!--[if IE 9]>
-<style type="text/css">
-.swiper-container{
-top: 80px !important;
-}
-</style>
-<![endif]-->
-<div class="swiper-wrapper" style="width: 7333.33px; height: 270px; transform: translate3d(-1000px, 0px, 0px); transition-duration: 0s;"><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/hujiya.png" alt=""></div>
-<div class="title_name">呼吉雅</div></div>
-<div class="list_detail_article">
-从4月17号开始计科一，到今天5月8号考试完。每天做题，犹如一日三“餐”。所有的错题、收藏题都重新做过了。这两天在潜意识里紧张了许久，今天终于把它给考过了！超开心
-</div>
-</div>
-</div><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/liujiahao200012.png" alt=""></div>
-<div class="title_name">刘佳豪200012</div></div>
-<div class="list_detail_article">
-三月二号报名，五月三十一号拿的驾照.感谢一点通的一路陪伴!可能以后使用一点通的机会不多了，多少有一丝丝的不舍。
-</div>
-</div>
-</div><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/jidapangzi.png" alt=""></div>
-<div class="title_name">菊大胖子</div></div>
-<div class="list_detail_article">
-今天终于开考科目一结果我和小伙伴们都过了哈哈哈，紧张的心终于落下来了，为了庆祝我考过买了二只老母鸡既然不敢杀来吃，先养起来吧
-</div>
-</div>
-</div>
-<div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/yidiantong6688.png" alt=""></div>
-<div class="title_name">一点通6688</div></div>
-<div class="list_detail_article">
-驾照已拿，终于到手了，科目二补考了1次，科目三补考了2次，虽然一路坎坷，但还是要感谢驾校一点通的一路陪伴。
-</div>
-</div>
-</div>
-<div class="swiper-slide swiper-slide-visible" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/yuanjiyuansan.png" alt=""></div>
-<div class="title_name">缘聚缘散</div></div>
-<div class="list_detail_article">
-科目一很简单的，随便考考就能满分过的，只要进考场不紧张就可以了，多在驾校一点通上面做做题目，保正前途一片光明。
-</div>
-</div>
-</div>
-<div class="swiper-slide swiper-slide-visible" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/wendumanyan.png" alt=""></div>
-<div class="title_name">温度蔓延</div></div>
-<div class="list_detail_article">
-科目一90分一次过，不容易做题要看清楚尽量要慢有些题目你越是做很多遍往往会做错。别太快慢一点都会过的。
-</div>
-</div>
-</div>
-<div class="swiper-slide swiper-slide-visible" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/gushenyiren.png" alt=""></div>
-<div class="title_name">孤身一人</div></div>
-<div class="list_detail_article">
-刚刚科目二90分一把过，考试最重要是心态，之前很紧张，考试时反倒一点都不紧张。望友友们都一把过
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/siyecao.png" alt=""></div>
-<div class="title_name">四叶草</div></div>
-<div class="list_detail_article">
-7号考的科目一，94分，说句心里话，心脏都是跳的很快，可以先做会的题，不会的先放着，做完了再回去做没做的，这样就会及格了
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/lulu.png" alt=""></div>
-<div class="title_name">露露</div></div>
-<div class="list_detail_article">
-科一还没考呢，买了一个驾校一点通的vip.才看完一遍，有时候考80多，有时候考90多分，每次看题都不认真[:偷笑][:偷笑]这粗心大意的毛病，没治了
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/doudou.png" alt=""></div>
-<div class="title_name">豆豆</div></div>
-<div class="list_detail_article">
-每次都测试八十多，九十，时间老不够用，考试不知道能否过，每天都是紧张的练习，加油吧！
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/yumi.png" alt=""></div>
-<div class="title_name">yumi</div></div>
-<div class="list_detail_article">
-科目一97分过了，练车！真正考试时候比练题简单，大家不要担心。平时能考多少到时候就差不多能考多少。
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/Aleifeng.png" alt=""></div>
-<div class="title_name">A雷风</div></div>
-<div class="list_detail_article">
-今天拿证了，科四满分，挺简单的，感谢一点通陪伴，我觉得心态要好，从科一到科四没有骂过小编一句。做错题我就记住下次注意，没什么难的。
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/binshao.png" alt=""></div>
-<div class="title_name">彬少</div></div>
-<div class="list_detail_article">
-今天终于拿上证啦，谢谢一点通一路以来的陪伴，让我能顺顺利利的拿到本本，谢谢小编，我也学会了很多东西，祝一点通越办越好，帮到更多的人！谢谢！
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/mengmengtuer.png" alt=""></div>
-<div class="title_name">萌萌兔儿</div></div>
-<div class="list_detail_article">
-谢谢一点通两个半月的陪伴，刚刚通过科三理论，下午拿证，祝一点通其他各位学员逢考必过！！！
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/qinqinbaobei.png" alt=""></div>
-<div class="title_name">亲亲宝贝</div></div>
-<div class="list_detail_article">
-四月二十六号考的科目一以94分考过，来还愿了！谢谢考神娘娘，希望在接下来的科目二科目三科目四也轻松考过，到那时定来还愿！考神保佑！
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/nulifengdouba.png" alt=""></div>
-<div class="title_name">努力奋斗吧</div></div>
-<div class="list_detail_article">
-科目二一次性过，听说点赞会有好运，切记车速慢，忘哪边转弯看哪边，不能压线，做到思路清晰。
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/hujiya.png" alt=""></div>
-<div class="title_name">呼吉雅</div></div>
-<div class="list_detail_article">
-从4月17号开始计科一，到今天5月8号考试完。每天做题，犹如一日三“餐”。所有的错题、收藏题都重新做过了。这两天在潜意识里紧张了许久，今天终于把它给考过了！超开心
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/liujiahao200012.png" alt=""></div>
-<div class="title_name">刘佳豪200012</div></div>
-<div class="list_detail_article">
-三月二号报名，五月三十一号拿的驾照.感谢一点通的一路陪伴!可能以后使用一点通的机会不多了，多少有一丝丝的不舍。
-</div>
-</div>
-</div>
-<div class="swiper-slide" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/jidapangzi.png" alt=""></div>
-<div class="title_name">菊大胖子</div></div>
-<div class="list_detail_article">
-今天终于开考科目一结果我和小伙伴们都过了哈哈哈，紧张的心终于落下来了，为了庆祝我考过买了二只老母鸡既然不敢杀来吃，先养起来吧
-</div>
-</div>
-</div>
-<div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/yidiantong6688.png" alt=""></div>
-<div class="title_name">一点通6688</div></div>
-<div class="list_detail_article">
-驾照已拿，终于到手了，科目二补考了1次，科目三补考了2次，虽然一路坎坷，但还是要感谢驾校一点通的一路陪伴。
-</div>
-</div>
-</div><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/yuanjiyuansan.png" alt=""></div>
-<div class="title_name">缘聚缘散</div></div>
-<div class="list_detail_article">
-科目一很简单的，随便考考就能满分过的，只要进考场不紧张就可以了，多在驾校一点通上面做做题目，保正前途一片光明。
-</div>
-</div>
-</div><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
-<div class="learn_interact_list_detail">
-<div class="list_detail_title">
-<div class="title_img">
-<img src="./image/wendumanyan.png" alt=""></div>
-<div class="title_name">温度蔓延</div></div>
-<div class="list_detail_article">
-科目一90分一次过，不容易做题要看清楚尽量要慢有些题目你越是做很多遍往往会做错。别太快慢一点都会过的。
-</div>
-</div>
-</div></div>
-</div>
-<div class="swiper-button-next"></div>
-<div class="swiper-button-prev"></div>
-</div>
+    <h3>学车互动</h3>
+    <!-- 学车互动列表 -->
+    <div class="learn_interact_list">
+    <div class="swiper-container">
+    <!--[if IE 9]>
+    <style type="text/css">
+    .swiper-container{
+    top: 80px !important;
+    }
+    </style>
+    <![endif]-->
+    <div class="swiper-wrapper" style="width: 7333.33px; height: 270px; transform: translate3d(-1000px, 0px, 0px); transition-duration: 0s;"><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/hujiya.png" alt=""></div>
+    <div class="title_name">呼吉雅</div></div>
+    <div class="list_detail_article">
+    从4月17号开始计科一，到今天5月8号考试完。每天做题，犹如一日三“餐”。所有的错题、收藏题都重新做过了。这两天在潜意识里紧张了许久，今天终于把它给考过了！超开心
+    </div>
+    </div>
+    </div><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/liujiahao200012.png" alt=""></div>
+    <div class="title_name">刘佳豪200012</div></div>
+    <div class="list_detail_article">
+    三月二号报名，五月三十一号拿的驾照.感谢一点通的一路陪伴!可能以后使用一点通的机会不多了，多少有一丝丝的不舍。
+    </div>
+    </div>
+    </div><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/jidapangzi.png" alt=""></div>
+    <div class="title_name">菊大胖子</div></div>
+    <div class="list_detail_article">
+    今天终于开考科目一结果我和小伙伴们都过了哈哈哈，紧张的心终于落下来了，为了庆祝我考过买了二只老母鸡既然不敢杀来吃，先养起来吧
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide swiper-slide-visible swiper-slide-active" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/yidiantong6688.png" alt=""></div>
+    <div class="title_name">一点通6688</div></div>
+    <div class="list_detail_article">
+    驾照已拿，终于到手了，科目二补考了1次，科目三补考了2次，虽然一路坎坷，但还是要感谢驾校一点通的一路陪伴。
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide swiper-slide-visible" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/yuanjiyuansan.png" alt=""></div>
+    <div class="title_name">缘聚缘散</div></div>
+    <div class="list_detail_article">
+    科目一很简单的，随便考考就能满分过的，只要进考场不紧张就可以了，多在驾校一点通上面做做题目，保正前途一片光明。
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide swiper-slide-visible" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/wendumanyan.png" alt=""></div>
+    <div class="title_name">温度蔓延</div></div>
+    <div class="list_detail_article">
+    科目一90分一次过，不容易做题要看清楚尽量要慢有些题目你越是做很多遍往往会做错。别太快慢一点都会过的。
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide swiper-slide-visible" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/gushenyiren.png" alt=""></div>
+    <div class="title_name">孤身一人</div></div>
+    <div class="list_detail_article">
+    刚刚科目二90分一把过，考试最重要是心态，之前很紧张，考试时反倒一点都不紧张。望友友们都一把过
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/siyecao.png" alt=""></div>
+    <div class="title_name">四叶草</div></div>
+    <div class="list_detail_article">
+    7号考的科目一，94分，说句心里话，心脏都是跳的很快，可以先做会的题，不会的先放着，做完了再回去做没做的，这样就会及格了
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/lulu.png" alt=""></div>
+    <div class="title_name">露露</div></div>
+    <div class="list_detail_article">
+    科一还没考呢，买了一个驾校一点通的vip.才看完一遍，有时候考80多，有时候考90多分，每次看题都不认真[:偷笑][:偷笑]这粗心大意的毛病，没治了
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/doudou.png" alt=""></div>
+    <div class="title_name">豆豆</div></div>
+    <div class="list_detail_article">
+    每次都测试八十多，九十，时间老不够用，考试不知道能否过，每天都是紧张的练习，加油吧！
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/yumi.png" alt=""></div>
+    <div class="title_name">yumi</div></div>
+    <div class="list_detail_article">
+    科目一97分过了，练车！真正考试时候比练题简单，大家不要担心。平时能考多少到时候就差不多能考多少。
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/Aleifeng.png" alt=""></div>
+    <div class="title_name">A雷风</div></div>
+    <div class="list_detail_article">
+    今天拿证了，科四满分，挺简单的，感谢一点通陪伴，我觉得心态要好，从科一到科四没有骂过小编一句。做错题我就记住下次注意，没什么难的。
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/binshao.png" alt=""></div>
+    <div class="title_name">彬少</div></div>
+    <div class="list_detail_article">
+    今天终于拿上证啦，谢谢一点通一路以来的陪伴，让我能顺顺利利的拿到本本，谢谢小编，我也学会了很多东西，祝一点通越办越好，帮到更多的人！谢谢！
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/mengmengtuer.png" alt=""></div>
+    <div class="title_name">萌萌兔儿</div></div>
+    <div class="list_detail_article">
+    谢谢一点通两个半月的陪伴，刚刚通过科三理论，下午拿证，祝一点通其他各位学员逢考必过！！！
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/qinqinbaobei.png" alt=""></div>
+    <div class="title_name">亲亲宝贝</div></div>
+    <div class="list_detail_article">
+    四月二十六号考的科目一以94分考过，来还愿了！谢谢考神娘娘，希望在接下来的科目二科目三科目四也轻松考过，到那时定来还愿！考神保佑！
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/nulifengdouba.png" alt=""></div>
+    <div class="title_name">努力奋斗吧</div></div>
+    <div class="list_detail_article">
+    科目二一次性过，听说点赞会有好运，切记车速慢，忘哪边转弯看哪边，不能压线，做到思路清晰。
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/hujiya.png" alt=""></div>
+    <div class="title_name">呼吉雅</div></div>
+    <div class="list_detail_article">
+    从4月17号开始计科一，到今天5月8号考试完。每天做题，犹如一日三“餐”。所有的错题、收藏题都重新做过了。这两天在潜意识里紧张了许久，今天终于把它给考过了！超开心
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/liujiahao200012.png" alt=""></div>
+    <div class="title_name">刘佳豪200012</div></div>
+    <div class="list_detail_article">
+    三月二号报名，五月三十一号拿的驾照.感谢一点通的一路陪伴!可能以后使用一点通的机会不多了，多少有一丝丝的不舍。
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/jidapangzi.png" alt=""></div>
+    <div class="title_name">菊大胖子</div></div>
+    <div class="list_detail_article">
+    今天终于开考科目一结果我和小伙伴们都过了哈哈哈，紧张的心终于落下来了，为了庆祝我考过买了二只老母鸡既然不敢杀来吃，先养起来吧
+    </div>
+    </div>
+    </div>
+    <div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/yidiantong6688.png" alt=""></div>
+    <div class="title_name">一点通6688</div></div>
+    <div class="list_detail_article">
+    驾照已拿，终于到手了，科目二补考了1次，科目三补考了2次，虽然一路坎坷，但还是要感谢驾校一点通的一路陪伴。
+    </div>
+    </div>
+    </div><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/yuanjiyuansan.png" alt=""></div>
+    <div class="title_name">缘聚缘散</div></div>
+    <div class="list_detail_article">
+    科目一很简单的，随便考考就能满分过的，只要进考场不紧张就可以了，多在驾校一点通上面做做题目，保正前途一片光明。
+    </div>
+    </div>
+    </div><div class="swiper-slide swiper-slide-duplicate" style="width: 333.333px; height: 270px;">
+    <div class="learn_interact_list_detail">
+    <div class="list_detail_title">
+    <div class="title_img">
+    <img src="./image/wendumanyan.png" alt=""></div>
+    <div class="title_name">温度蔓延</div></div>
+    <div class="list_detail_article">
+    科目一90分一次过，不容易做题要看清楚尽量要慢有些题目你越是做很多遍往往会做错。别太快慢一点都会过的。
+    </div>
+    </div>
+    </div></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    </div>
 </div>
 
+    <!--尾部-->
 <footer class="comment-footer">
 
     <div class="comment-footer-about">
@@ -605,12 +607,11 @@ top: 80px !important;
     </div>
 </footer>
 
-<link rel="stylesheet" href="./image/bootstrap.css">
-<link rel="stylesheet" href="./image/comm_style.css">
-<link rel="stylesheet" href="./image/footer.css">
-
-<script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"footer","page":"info"}'</script><script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"header","page":"info"}'</script><script src="./image/hm.txt"></script><script src="./js/jquery.js"></script>
-<script src="./image/api"></script><script type="text/javascript" src="./image/getscript"></script>
+<script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"footer","page":"info"}'</script>
+<script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"header","page":"info"}'</script>
+<script src="./js/jquery.js"></script>
+<script src="./image/api"></script>
+<script type="text/javascript" src="./image/getscript"></script>{{--题库和搜索--}}
 <script src="./js/cookie_tool.js"></script>
 <!--[if lt IE 10]>
 <script type="text/javascript" src="//j1.58cdn.com.cn/dist/jxedt/pc/products/jxregister/js/placeholder.js?_t=20180710" charset="utf-8"></script>
@@ -651,12 +652,11 @@ top: 80px !important;
     }
 </script>
 <script src="./js/common_header.js"></script>
-<script src="./js/footer.js"></script>
-<script src="./js/common_footer.js"></script>
-<script src="./js/referrer_jxedt_pc.js"></script>
-<script src="./js/hits.js"></script>
-
-<script src="./js/idangerous.js"></script>
-<script src="./js/jxindex.js"></script>
+{{--<script src="./js/footer.js"></script>--}}
+{{--<script src="./js/common_footer.js"></script>--}}
+{{--<script src="./js/referrer_jxedt_pc.js"></script>--}}
+{{--<script src="./js/hits.js"></script>--}}
+{{--<script src="./js/idangerous.js"></script>--}}
+{{--<script src="./js/jxindex.js"></script>--}}
 </body>
 </html>
