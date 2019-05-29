@@ -59,7 +59,7 @@
                 <div class="question_title">
                     <span>题库：</span>
                     <span class="comment-header-car" topname="ckm" name="小车">小车</span>
-                    <img class="comment-header-search-position-city" src="./image/city.png" alt="">
+                    {{--<img class="comment-header-search-position-city" src="./image/city.png" alt="">--}}
                 </div>
                 <div class="question_list">
                     <ul class="drive_card">
@@ -67,16 +67,16 @@
                             <span>驾驶证：</span>
                         </li>
                         <li>
-                            <a danname="ckm" href="http://mnks.jxedt.com/ckm1" onclick="clickLog('from=JXEDT_TK_XC')" class="question-active">小车</a>
+                            <a danname="ckm" href="" onclick="clickLog('from=JXEDT_TK_XC')" class="question-active">小车</a>
                         </li>
                         <li>
-                            <a danname="akm" href="http://mnks.jxedt.com/akm1/" onclick="clickLog('from=JXEDT_TK_KC')">客车</a>
+                            <a danname="akm" href="" onclick="clickLog('from=JXEDT_TK_KC')">客车</a>
                         </li>
                         <li>
-                            <a danname="bkm" href="http://mnks.jxedt.com/bkm1/" onclick="clickLog('from=JXEDT_TK_HC')">货车</a>
+                            <a danname="bkm" href="" onclick="clickLog('from=JXEDT_TK_HC')">货车</a>
                         </li>
                         <li>
-                            <a danname="ekm" href="http://mnks.jxedt.com/ekm1/" onclick="clickLog('from=JXEDT_TK_MTC')">摩托车</a>
+                            <a danname="ekm" href="" onclick="clickLog('from=JXEDT_TK_MTC')">摩托车</a>
                         </li>
                     </ul>
                 </div>
@@ -124,7 +124,7 @@
                         </a>
                         <div class="header-menu-dropdown-content">
                             <p>
-                                <a href="http://mnks.jxedt.com/ckm1">小车试题</a>
+                                <a href="">小车试题</a>
                             </p>
                             <p>
                                 <a href="http://mnks.jxedt.com/akm1/">客车试题</a>
@@ -135,14 +135,9 @@
                             <p>
                                 <a href="http://mnks.jxedt.com/ekm1/">摩托车试题</a>
                             </p>
-                            <p>
-                                <a href="http://zgzks.jxedt.com/">从业资格考试</a>
-                            </p>
-                            <p>
-                                <a href="http://mnks.jxedt.com/huifu/">恢复资格考试</a>
-                            </p>
                         </div>
                     </li>
+
                     <li>
                         <a href="http://vip.jxedt.com/" onclick="clickLog('from=JXEDT_HTAB_VIP')" style="color: rgb(74, 74, 74);">VIP真题</a>
                     </li>
@@ -256,7 +251,7 @@
 
     <!--小车考试-->
     <div class="car_s_exam">
-<<<<<<< HEAD
+
 <div class="car_s_exam_context">
 <div class="title">小车理论考试</div>
 <div class="exam_card">
@@ -279,8 +274,7 @@
 模拟考试
 </a>
 </span>
-=======
->>>>>>> master
+
 
             </div>
             </div>
@@ -612,14 +606,12 @@
     </div>
 </footer>
 
-<<<<<<< HEAD
-=======
 <script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"footer","page":"info"}'</script>
 <script>var _trackURL = '{"cate":"NA","area":"NA","pagetype":"header","page":"info"}'</script>
 <script src="./js/jquery.js"></script>
 <script src="./image/api"></script>
 <script type="text/javascript" src="./image/getscript"></script>{{--题库和搜索--}}
->>>>>>> master
+
 <script src="./js/cookie_tool.js"></script>
 <!--[if lt IE 10]>
 <script type="text/javascript" src="//j1.58cdn.com.cn/dist/jxedt/pc/products/jxregister/js/placeholder.js?_t=20180710" charset="utf-8"></script>

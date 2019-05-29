@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>pagination-nick</title>
+    <link rel="stylesheet" href="./css/jx_index.css">{{--导航栏VIP命题--}}
     <style>
         button{
             padding:5px;
@@ -18,6 +19,55 @@
     </style>
 </head>
 <body>
+<!--小车考试-->
+<div class="car_s_exam">
+
+    <div class="car_s_exam_context">
+        <div class="title">小车理论考试</div>
+        <div class="exam_card">
+            <div class="exam_card_header">
+                科目一交规
+            </div>
+            <div class="exam_card_body">
+                <div>
+                    <a href="{{url('orders')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
+                    <a href="http://mnks.jxedt.com/ckm1/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
+                </div>
+                <div>
+                    <a href="http://mnks.jxedt.com/ckm1/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_ZXLX')"><span>专项练习</span></a>
+                    <a href="http://mnks.jxedt.com/ckm1/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_CTLX')"><span>错题练习</span></a>
+                </div>
+            </div>
+            <div class="exam_card_footer">
+<span>
+<a href="http://mnks.jxedt.com/ckm1/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_MNLX')">
+模拟考试
+</a>
+</span>
+
+
+            </div>
+        </div>
+        <div class="exam_card">
+            <div class="exam_card_header">
+                科目四安全文明驾驶
+            </div>
+            <div class="exam_card_body">
+                <div>
+                    <a href="http://mnks.jxedt.com/ckm4/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SSLX')"><span>顺序练习</span></a>
+                    <a href="http://mnks.jxedt.com/ckm4/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SJLX')"><span>随机练习</span></a>
+                </div>
+                <div>
+                    <a href="http://mnks.jxedt.com/ckm4/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_ZXLX')"><span>专项练习</span></a>
+                    <a href="http://mnks.jxedt.com/ckm4/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_CTLX')"><span>错题练习</span></a>
+                </div>
+            </div>
+            <div class="exam_card_footer">
+                <span><a href="http://mnks.jxedt.com/ckm4/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_MNLX')">模拟考试</a></span>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="pagination-nick"></div>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
@@ -38,8 +88,8 @@
             maxCount:0,//ajax请求数据分成的最大页码
             data:[]//ajax请求的数据
         };
-        pager = $.extend(pager,opt);
-        console.log(pager);
+        pager = $.extend(pager,opt);//用于合并对象
+
         //请求数据页面跳转方法
         function goPage(btn){
             //obj为ajax请求数据
@@ -87,6 +137,7 @@
             });
             $('.'+pager.mainBox).html(str);
         }
+
         //创建非数字按钮和数据内容区
         function createOtherBtn(){
             $('.'+pager.paginationBox).html('<div class="'+pager.btnBox+'"><button data-page="first" class="first-btn">首页</button><button data-page="prev" class="prev-btn">上一页</button><span class="'+pager.numBtnBox+'"></span><button data-page="next" class="next-btn">下一页</button><input type="text" placeholder="请输入页码" class="'+pager.ipt+'"><button class="'+pager.goBtn+'">确定go</button><button data-page="last" class="last-btn">尾页</button></div><div class="'+pager.mainBox+'"></div>');
