@@ -105,7 +105,7 @@ function add(){
       success: function(msg){
         if (msg == 1) {
           alert("欢迎老司机！");
-          window.location.href="{{url('logins')}}";
+          window.location.href="{{url('/')}}";
         }else{
           alert("山炮你还没有账号呢！");
           window.location.href="{{url('register')}}";

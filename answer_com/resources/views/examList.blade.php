@@ -3,72 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <title>pagination-nick</title>
-    <link rel="stylesheet" href="./css/jx_index.css">{{--导航栏VIP命题--}}
+    <link rel="stylesheet" href="./css/jx_index.css">
+    {{--导航栏VIP命题--}}
     <style>
-        button{
-            padding:5px;
-            margin:5px;
-        }
-        .active-nick{
-            color:red;
-        }
-        input{
-            width:50px;
-            text-align:center;
+        .boxx{
+            margin:0 auto;
+            width:865px;
         }
     </style>
 </head>
+<link href="http://www.jiakaobaodian.com/core-assets/jiakao/application/mnks/kemu1-4/css/main.css?v=1.0.8" rel="stylesheet" type="text/css">
 <body>
-<!--小车考试-->
-<div class="car_s_exam">
+<!-- <div class="pagination-nick"></div> -->
+<div class="boxx">
+<div class="layout-article" ref="comMain" data-dom-ready data-sp="0.6">
+<div class="container news-page">
+<div class="frame-l-r">
+<div class="left">
+<div class="header">
+    <h1>秋名山--2019 “<?php echo $lx; ?>科目一，考试”</h1>
+    <h2>科目一，又称科目一理论考试、驾驶员理论考试，是机动车驾驶证考核的一部分 。根据《机动车驾驶证申领和使用规定》，考试内容包括驾车理论基础、道路安全法律法规、地方性法规等相关知识。考试形式为上机考试，100道题，90分及以上过关。</h2>
+</div>
 
-    <div class="car_s_exam_context">
-        <div class="title">小车理论考试</div>
-        <div class="exam_card">
-            <div class="exam_card_header">
-                科目一交规
-            </div>
-            <div class="exam_card_body">
-                <div>
-                    <a href="{{url('orders')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
-                    <a href="http://mnks.jxedt.com/ckm1/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
-                </div>
-                <div>
-                    <a href="http://mnks.jxedt.com/ckm1/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_ZXLX')"><span>专项练习</span></a>
-                    <a href="http://mnks.jxedt.com/ckm1/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_CTLX')"><span>错题练习</span></a>
-                </div>
-            </div>
-            <div class="exam_card_footer">
-<span>
-<a href="http://mnks.jxedt.com/ckm1/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_MNLX')">
-模拟考试
-</a>
-</span>
+<div class="com-tiku-menu" data-dom-ready data-sp="0.26">
+    <ul class="menu-list clearfix">
+        <li>
+        <a target="_blank" href="/mnks/exercise/0-car-kemu1.html" class="icon0">顺序练习</a>
+        </li>
+        <li>
+        <a target="_blank" href="/mnks/exercise/3-car-kemu1.html" class="icon1">随机练习</a>
+        </li>
+        <li>
+        <a target="_blank" href="/mnks/chapter/car-kemu1-beijing.html" class="icon2">章节练习</a>
+        </li>
+        <li>
+        <a target="_blank" href="/mnks/strengthen/car-kemu1-beijing.html" class="icon3">专项练习</a>
+        </li>
+        <li>
+        <a target="_blank" href="/mnks/exercise/8-car-kemu1.html" class="icon4">难题练习</a>
+        </li>
+        <li>
+        <a target="_blank" href="http://www.jiakaobaodian.com/mnks/exam/car-kemu1-beijing.html" class="icon5">全真模拟</a>
+        </li>
+    </ul>
+</div>
+<div class="com-mnks-course-statis com-part block-static" data-dom-ready data-sp="0.35">
+    <h3 class="part-title">小车科目一练习及考试统计</h3>
+    <div class="content-wapper cl">
+    <div id="holder" class="s-circle fl">
+        <label></label>
+        <i></i>
+    </div>
 
+    <div class="s-info fl">
+        <p class="p1 cl">
+        <span class="i0 ii"></span>
+        <span class="n1">做对<?php echo $cts; ?>题</span>
+        <span class="n2">占比*%</span>
+        </p>
+        <p class="p2 cl">
+        <span class="i1 ii"></span>
+        <span class="n1">做错<?php echo $dts; ?>题</span>
+        <span class="n2">占比*%</span>
+        </p>
+        <p class="p3 cl">
+        <span class="i2 ii"></span>
+        <span class="n1">未做*题</span>
+        <span class="n2">占比*%</span>
+        </p>
+    </div>
 
-            </div>
-        </div>
-        <div class="exam_card">
-            <div class="exam_card_header">
-                科目四安全文明驾驶
-            </div>
-            <div class="exam_card_body">
-                <div>
-                    <a href="http://mnks.jxedt.com/ckm4/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SSLX')"><span>顺序练习</span></a>
-                    <a href="http://mnks.jxedt.com/ckm4/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SJLX')"><span>随机练习</span></a>
-                </div>
-                <div>
-                    <a href="http://mnks.jxedt.com/ckm4/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_ZXLX')"><span>专项练习</span></a>
-                    <a href="http://mnks.jxedt.com/ckm4/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_CTLX')"><span>错题练习</span></a>
-                </div>
-            </div>
-            <div class="exam_card_footer">
-                <span><a href="http://mnks.jxedt.com/ckm4/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_MNLX')">模拟考试</a></span>
-            </div>
-        </div>
+    <div class="s-link fr cl">
+        <a class="favor fl" data-action="login_url" target="_blank" rel="nofollow" ref="loginBtn">我的收藏</a>
+        <a class="record fl" data-action="login_url" target="_blank" rel="nofollow" ref="loginBtn">考试记录</a>
+        <a class="rank fl" target="_blank" rel="nofollow" href="/mnks/rank/car-kemu1-beijing.html">排行榜</a>
+    </div>
     </div>
 </div>
-<div class="pagination-nick"></div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     //        定义一个分页方法，可多次调用
@@ -139,32 +158,6 @@
         }
 
         //创建非数字按钮和数据内容区
-        function createOtherBtn(){
-            $('.'+pager.paginationBox).html('<div class="'+pager.btnBox+'"><button data-page="first" class="first-btn">首页</button><button data-page="prev" class="prev-btn">上一页</button><span class="'+pager.numBtnBox+'"></span><button data-page="next" class="next-btn">下一页</button><input type="text" placeholder="请输入页码" class="'+pager.ipt+'"><button class="'+pager.goBtn+'">确定go</button><button data-page="last" class="last-btn">尾页</button></div><div class="'+pager.mainBox+'"></div>');
-            //ipt value变化并赋值给go btn data-page
-            $('.'+pager.btnBox+' .'+pager.ipt).change(function(){
-                if(!isNaN($(this).val())){//是数字
-                    if($(this).val() > pager.maxCount){//限制value最大值，跳转尾页
-                        $(this).val(pager.maxCount);
-                    }
-                    if($(this).val()<1){//限制value最小值，跳转首页
-                        $(this).val(1);
-                    }
-                }else{//非数字清空value
-                    $(this).val('');
-                }
-                $('.'+pager.btnBox+' .'+pager.goBtn).attr('data-page',$(this).val() ? $(this).val()-1 : '');
-            });
-            //每个btn绑定请求数据页面跳转方法
-            $('.'+pager.btnBox+' button').each(function(i,v){
-                $(this).click(function(){
-                    //有值且不是上一次的页码时才调用
-                    if(v.getAttribute('data-page') && v.getAttribute('data-page') != pager.currentPage){
-                        goPage(v.getAttribute('data-page'));
-                    }
-                });
-            });
-        }
         //创建数字按钮
        /* function createNumBtn(page){
             //page是页面index从0开始，这里的page加减一要注意

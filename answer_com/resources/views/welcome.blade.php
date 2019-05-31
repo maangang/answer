@@ -41,10 +41,17 @@
                 <span class="comment-header-phone-describe">秋名山驾照考核热线:
                     <span class="comment-header-phone">0315-666666</span>
                 </span>
+                <?php if(empty(session('name'))){ ?>
                 <div class="comment-login-1" style="display:inline-block;">
-                    <span class="btn-span"><a href="http://user.jxedt.com/home/login" onclick="clickLog('from=JXEDT_HEADER_LOGIN')">登录</a></span>
-                    <span class="btn-span"><a href="http://user.jxedt.com/registerNew/xy" target="_blank" onclick="clickLog('from=JXEDT_HEADER_SIGNIN')">注册</a></span>
+                    <span class="btn-span"><a href="logins">登录</a></span>
+                    <span class="btn-span"><a href="register" target="_blank">注册</a></span>
                 </div>
+                <?php }else{?>
+                <div class="comment-login-1" style="display:inline-block;">
+                    <span class="btn-span">欢迎老司机：</span>
+                    <span class="btn-span"><?php echo session('name'); ?></span>
+                </div>
+                <?php }?>
            </div>
         </div>
 
@@ -124,16 +131,16 @@
                         </a>
                         <div class="header-menu-dropdown-content">
                             <p>
-                                <a href="">小车试题</a>
+<a href="examLists?name=1&id=<?php echo session('id'); ?>">小车试题</a>
                             </p>
                             <p>
-                                <a href="http://mnks.jxedt.com/akm1/">客车试题</a>
+                                <a href="examLists?name=2">客车试题</a>
                             </p>
                             <p>
-                                <a href="http://mnks.jxedt.com/bkm1/">货车试题</a>
+                                <a href="examLists?name=3">货车试题</a>
                             </p>
                             <p>
-                                <a href="http://mnks.jxedt.com/ekm1/">摩托车试题</a>
+                                <a href="examLists?name=4">摩托车试题</a>
                             </p>
                         </div>
                     </li>
