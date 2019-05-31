@@ -118,22 +118,22 @@
                         <a href="http://www.jxedt.com/" linkrul="www" onclick="clickLog('from=JXEDT_HTAB_HOME')" style="color: rgb(0, 195, 86);">首页</a>
                     </li>
                     <li class="header-menu-dropdown">
-                        <a href="http://mnks.jxedt.com/" onclick="clickLog('from=JXEDT_HTAB_MNKS')" style="color: rgb(74, 74, 74);">
+                        <a href="" onclick="clickLog('from=JXEDT_HTAB_MNKS')" style="color: rgb(74, 74, 74);">
                             模拟考试
                             <div class="down"></div>
                         </a>
                         <div class="header-menu-dropdown-content">
                             <p>
-                                <a href="">小车试题</a>
+                                <span href="examList" class="chexing" datatype="xiaoche">小车试题</span>
                             </p>
                             <p>
-                                <a href="http://mnks.jxedt.com/akm1/">客车试题</a>
+                                <span href="" class="chexing" datatype="keche">客车试题</span>
                             </p>
                             <p>
-                                <a href="http://mnks.jxedt.com/bkm1/">货车试题</a>
+                                <span href="" class="chexing" datatype="huoche">货车试题</span>
                             </p>
                             <p>
-                                <a href="http://mnks.jxedt.com/ekm1/">摩托车试题</a>
+                                <span href="" class="chexing" datatype="moche">摩托车试题</span>
                             </p>
                         </div>
                     </li>
@@ -198,6 +198,8 @@
                                                                                                 </div></div>
             <div class="swiper-pagination"><span class="swiper-pagination-switch"></span><span class="swiper-pagination-switch swiper-visible-switch swiper-active-switch"></span></div>
         </div>
+
+        <!--学车流程-->
         <div class="banner_process">
             <ul>
                 <h3>学车流程</h3>
@@ -250,54 +252,7 @@
     </div>
 
     <!--小车考试-->
-    <div class="car_s_exam">
-
-<div class="car_s_exam_context">
-<div class="title">小车理论考试</div>
-<div class="exam_card">
-<div class="exam_card_header">
-科目一交规
-</div>
-<div class="exam_card_body">
-<div>
-<a href="{{url('orders')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
-<a href="http://mnks.jxedt.com/ckm1/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
-</div>
-<div>
-<a href="http://mnks.jxedt.com/ckm1/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_ZXLX')"><span>专项练习</span></a>
-<a href="http://mnks.jxedt.com/ckm1/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_CTLX')"><span>错题练习</span></a>
-</div>
-</div>
-<div class="exam_card_footer">
-<span>
-<a href="http://mnks.jxedt.com/ckm1/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_MNLX')">
-模拟考试
-</a>
-</span>
-
-
-            </div>
-            </div>
-            <div class="exam_card">
-                <div class="exam_card_header">
-                科目四安全文明驾驶
-                </div>
-                <div class="exam_card_body">
-                <div>
-                <a href="http://mnks.jxedt.com/ckm4/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SSLX')"><span>顺序练习</span></a>
-                <a href="http://mnks.jxedt.com/ckm4/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SJLX')"><span>随机练习</span></a>
-                </div>
-                <div>
-                <a href="http://mnks.jxedt.com/ckm4/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_ZXLX')"><span>专项练习</span></a>
-                <a href="http://mnks.jxedt.com/ckm4/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_CTLX')"><span>错题练习</span></a>
-                </div>
-                </div>
-                <div class="exam_card_footer">
-                    <span><a href="http://mnks.jxedt.com/ckm4/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_MNLX')">模拟考试</a></span>
-                </div>
-            </div>
-        </div>
-    </div>    <!--驾校教练排行-->
+        <!--驾校教练排行-->
 
         <!--学车互动-->
  <div class="learn_interact">
@@ -627,6 +582,20 @@
         cookie.set("local_city",basename);
         cookie.set("local_city_pingying",baseurl);
     });
+    $(".chexing").click(function(){
+        $.ajax({
+            type : "get",
+            url  : "cheType",
+            data : {
+                'cart_type' : $(this).attr('datatype'),
+            },
+            success:function(res)
+            {
+                console.log(res);
+            }
+        })
+    })
+
 </script>
 <script>
     function linkclick(obj) {

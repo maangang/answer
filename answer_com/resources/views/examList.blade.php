@@ -31,7 +31,7 @@
             <div class="exam_card_body">
                 <div>
                     <a href="{{url('orders')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
-                    <a href="http://mnks.jxedt.com/ckm1/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
+                    <a href="{{url('getOrder')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
                 </div>
                 <div>
                     <a href="http://mnks.jxedt.com/ckm1/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_ZXLX')"><span>专项练习</span></a>
@@ -68,7 +68,7 @@
         </div>
     </div>
 </div>
-<div class="pagination-nick"></div>
+
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     //        定义一个分页方法，可多次调用
@@ -119,6 +119,7 @@
                         }
                         break;
                     case 'last':
+
                         pager.currentPage=pager.maxCount-1;
                         break;
                 }
@@ -141,20 +142,7 @@
         //创建非数字按钮和数据内容区
         function createOtherBtn(){
             $('.'+pager.paginationBox).html('<div class="'+pager.btnBox+'"><button data-page="first" class="first-btn">首页</button><button data-page="prev" class="prev-btn">上一页</button><span class="'+pager.numBtnBox+'"></span><button data-page="next" class="next-btn">下一页</button><input type="text" placeholder="请输入页码" class="'+pager.ipt+'"><button class="'+pager.goBtn+'">确定go</button><button data-page="last" class="last-btn">尾页</button></div><div class="'+pager.mainBox+'"></div>');
-            //ipt value变化并赋值给go btn data-page
-            $('.'+pager.btnBox+' .'+pager.ipt).change(function(){
-                if(!isNaN($(this).val())){//是数字
-                    if($(this).val() > pager.maxCount){//限制value最大值，跳转尾页
-                        $(this).val(pager.maxCount);
-                    }
-                    if($(this).val()<1){//限制value最小值，跳转首页
-                        $(this).val(1);
-                    }
-                }else{//非数字清空value
-                    $(this).val('');
-                }
-                $('.'+pager.btnBox+' .'+pager.goBtn).attr('data-page',$(this).val() ? $(this).val()-1 : '');
-            });
+
             //每个btn绑定请求数据页面跳转方法
             $('.'+pager.btnBox+' button').each(function(i,v){
                 $(this).click(function(){
@@ -165,85 +153,6 @@
                 });
             });
         }
-        //创建数字按钮
-       /* function createNumBtn(page){
-            //page是页面index从0开始，这里的page加减一要注意
-            var str='';
-            if(pager.maxCount>pager.numBtnCount*2){//若最大页码数大于等于固定数字按钮总数（pager.numBtnCount*2+1）时
-                //此页左边右边各pager.numBtnCount个数字按钮
-                if(page-pager.numBtnCount>-1){//此页左边有pager.numBtnCount页 page页码从0开始
-                    for(var m=pager.numBtnCount;m>0;m--){
-                        str+='<button data-page="'+(page-m)+'">'+(page-m+1)+'</button>';
-                    }
-                }else{
-                    for(var k=0;k<page;k++){
-                        str+='<button data-page="'+k+'">'+(k+1)+'</button>';
-                    }
-                }
-                str+='<button data-page="'+page+'" class="'+pager.currentBtn+'" disabled="disabled">'+(page+1)+'</button>';//此页
-                if(pager.maxCount-page>3){//此页右边有pager.numBtnCount页 page页码从0开始
-                    for(var j=1;j<pager.numBtnCount+1;j++){
-                        str+='<button data-page="'+(page+j)+'">'+(page+j+1)+'</button>';
-                    }
-                }else{
-                    for(var i=page+1;i<pager.maxCount;i++){
-                        str+='<button data-page="'+i+'">'+(i+1)+'</button>';
-                    }
-                }
-                /*数字按钮总数小于固定的数字按钮总数pager.numBtnCount*2+1时，
-                 这个分支，可以省略*/
-              /*  if(str.match(/<\/button>/ig).length<pager.numBtnCount*2+1){
-                    str='';
-                    if(page<pager.numBtnCount){//此页左边页码少于固定按钮数时
-                        for(var n=0;n<page;n++){//此页左边
-                            str+='<button data-page="'+n+'">'+(n+1)+'</button>';
-                        }
-                        str+='<button data-page="'+page+'" class="'+pager.currentBtn+'" disabled="disabled">'+(page+1)+'</button>';//此页
-                        for(var x=1;x<pager.numBtnCount*2+1-page;x++){//此页右边
-                            str+='<button data-page="'+(page+x)+'">'+(page+x+1)+'</button>';
-                        }
-                    }
-                    if(pager.maxCount-page-1<pager.numBtnCount){
-                        for(var y=pager.numBtnCount*2-(pager.maxCount-page-1);y>0;y--){//此页左边
-                            str+='<button data-page="'+(page-y)+'">'+(page-y+1)+'</button>';
-                        }
-                        str+='<button data-page="'+page+'" class="'+pager.currentBtn+'" disabled="disabled">'+(page+1)+'</button>';//此页
-                        for(var z=page+1;z<pager.maxCount;z++){//此页右边
-                            str+='<button data-page="'+z+'">'+(z+1)+'</button>';
-                        }
-                    }
-                }
-            }else{
-                str='';
-                for(var n=0;n<page;n++){//此页左边
-                    str+='<button data-page="'+n+'">'+(n+1)+'</button>';
-                }
-                str+='<button data-page="'+page+'" class="'+pager.currentBtn+'" disabled="disabled">'+(page+1)+'</button>';//此页
-                for(var x=1;x<pager.maxCount-page;x++){//此页右边
-                    str+='<button data-page="'+(page+x)+'">'+(page+x+1)+'</button>';
-                }
-            }
-
-            $('.'+pager.numBtnBox).html(str);
-
-            //每个btn绑定请求数据页面跳转方法
-            $('.'+pager.numBtnBox+' button').each(function(i,v){
-                $(this).click(function(){
-                    goPage(v.getAttribute('data-page'));
-                });
-            });
-
-            //按钮禁用
-            $('.'+pager.btnBox+' button').not('.'+pager.currentBtn).attr('disabled',false);
-            if(!page){//首页时
-                $('.'+pager.btnBox+' .first-btn').attr('disabled',true);
-                $('.'+pager.btnBox+' .prev-btn').attr('disabled','disabled');
-            }
-            if(page==pager.maxCount-1){//尾页时
-                $('.'+pager.btnBox+' .last-btn').attr('disabled',true);
-                $('.'+pager.btnBox+' .next-btn').attr('disabled',true);
-            }
-        }*/
 
         //首屏加载
         createOtherBtn();//首屏加载一次非数字按钮即可

@@ -8,6 +8,7 @@
 
 namespace App\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class Exam
 {
@@ -18,5 +19,13 @@ class Exam
     }
     public function setCourse_typeAttr($val){
         return '213'.$val;
+    }
+
+    public function getOrder()
+    {
+        $data = DB::table('dolly_exam')->get()->map(function ($value) {
+        return (array)$value;
+        })->toArray();
+        return $data;
     }
 }

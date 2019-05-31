@@ -21,5 +21,18 @@ class Exam extends Controller
         return view('examList');
     }
 
+    public function cheType()
+    {
+        $request = new Request;
+        $data = $request->all();
+        var_dump( $data);
+    }
 
+    public function getOrder()
+    {
+        $ExamModel = new ExamModel;
+        $data = $ExamModel->getOrder();
+        //var_dump(trim(json_encode($data)));die;
+        return view('random',['data'=>trim(json_encode($data))]);
+    }
 }
