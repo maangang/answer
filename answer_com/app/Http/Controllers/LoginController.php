@@ -15,10 +15,11 @@ class LoginController extends Controller
 			['user_name',"=","$username"],
 			['password',"=","$password"]
 		])->first();
+		$uid = $res['user_id'];
 		if ($res) {
 			echo 1;
 			session(['name'=>$username]);
-			session(['id'=>$res['user_id']]);
+			//session(['id'=>$uid]);
 		}else{
 			echo 2;
 		}
