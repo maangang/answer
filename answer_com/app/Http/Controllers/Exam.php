@@ -29,10 +29,10 @@ class Exam extends Controller
        	$id = $request->get('id');
        	//var_dump($id);die;
        	$data = DB::table('yhtb')->where('uid','=',$id)->first();
+       	$sum = DB::
        	//var_dump($data);die;
        	$c = $data->cts;
        	$d = $data->dts;
-       	$h = $c+$d;
         return view('examList',['lx'=>$lxs,'name'=>$lx,'cts'=>$c,'dts'=>$d,'h'=>$h]);
     }    
 

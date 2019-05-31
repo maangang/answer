@@ -438,28 +438,28 @@
 	    obj.href = baseurl + afterurl;
 	}
 
+
 	/**
 	 * 题库hover事件
 	 */
-	$(".question").hover(function () {
+	/*$(".question").hover(function () {
 	    $(".question_list").show();
 	}, function () {
 	    $(".question_list").hide();
-	});
+	});*/
 
 	/**
 	 * 点击题库中的某个车型进行cookie操作
 	 */
-	$(".question .drive_card").on("click", "a", function () {
+	/*$(".question .drive_card").on("click", "a", function () {
 	    questionSwitch($(this), false);
-	});
-
+	});*/
 	/**
 	 * 设定题库链接
 	 * @param {*} _this 题库中的某个车型元素
 	 * @param {*} flag 是否是初始化
 	 */
-	function questionSwitch(_this, flag) {
+	/*function questionSwitch(_this, flag) {
 	    if (!flag) {
 	        // 变更题库文本内容
 	        $(".comment-header-car").text(_this.text());
@@ -492,6 +492,6 @@
 	    $($(".learn_flow ul li")[1]).find("a").attr("href", $($(".learn_flow ul li")[1]).find("a").attr("href").substring(0, 17) + $(".comment-header-car").attr("topname") + "1/");
 	    $($(".learn_flow ul li")[4]).find("a").attr("href", $($(".learn_flow ul li")[4]).find("a").attr("href").substring(0, 17) + $(".comment-header-car").attr("topname") + "4/");
 	}
-
+*/
 /***/ })
 /******/ ]);
