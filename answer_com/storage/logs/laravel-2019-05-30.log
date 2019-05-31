@@ -1,0 +1,6 @@
+[2019-05-30 00:39:46] local.ERROR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+  
+[2019-05-30 00:40:34] local.ERROR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+ (SQL: select * from `dolly_exam`)  
+[2019-05-30 00:40:49] local.ERROR: SQLSTATE[HY000] [2002] 由于目标计算机积极拒绝，无法连接。
+ (SQL: select * from `dolly_exam`)  
