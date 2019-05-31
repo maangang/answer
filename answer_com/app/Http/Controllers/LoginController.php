@@ -17,6 +17,8 @@ class LoginController extends Controller
 		])->first();
 		if ($res) {
 			echo 1;
+			session(['name'=>$username]);
+			session(['id'=>$res['user_id']]);
 		}else{
 			echo 2;
 		}
