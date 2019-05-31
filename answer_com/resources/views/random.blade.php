@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html><head>
+<html>
+<head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="baidu-site-verification" content="QXVdEdBQhU">
     <link rel="canonical" href="http://mnks.jxedt.com/ckm1/sxlx/">
@@ -11,11 +12,8 @@
     <meta name="mobile-agent" content="format=wml; url=http://m.jxedt.com/mnks/ckm1/sxlx/">
     <link href="./order/css/main.css" type="text/css" rel="stylesheet">
 </head>
-<body>
-<style>
-    .num-box-nick {
 
-    }
+<style>
     .jieshi-box{
         color : rgb(178 157 119);
         margin-top : 10px;
@@ -40,63 +38,59 @@
         background-color:#7ED321;
     }
     .red {
-    background-color:#DC143C;
+        background-color:#DC143C;
     }
 </style>
-<div class="nav main">
-    <a href="http://www.jxedt.com/">首页</a> &gt;
-    <a href="http://mnks.jxedt.com/">模拟考试</a> &gt;
-    <a href="http://mnks.jxedt.com/ckm1/">小车科目一</a> &gt;
-    <a href="http://mnks.jxedt.com/ckm1/sxlx/">顺序练习</a>
-</div>
-    <div class="btn-box-nick">
-    <div style="width:1190px;height:40px ;margin:10px auto">
+
+<body>
+    <div class="nav main">
+        <a href="http://www.jxedt.com/">首页</a> &gt;
+        <a href="http://mnks.jxedt.com/">模拟考试</a> &gt;
+        <a href="http://mnks.jxedt.com/ckm1/">小车科目一</a> &gt;
+        <a href="http://mnks.jxedt.com/ckm1/sxlx/">顺序练习</a>
+    </div>
+
+    <div class="btn-box-nick" style="width:1190px;height:40px ;margin:10px auto">
         <div class="lx main">
             <div class="main_title">随机练习<span>车型：小车</span><span>科目：科目一</span><span></span></div>
-            <div class="lx_box">
-                <div class="examone" id="main_M">
-                    <div class="lx_type" style="display: block;">单选题</div>
-                    <div class="box">
-
-                        <div class="loading" id="wartingdiv" style="display: none;">
-                            <img src="./order/image/loading.gif">
-                            加载中……
+            <div class="examone lx_box" id="main_M">
+                <div class="" style="display: block;">单选题</div>
+                <div class="box">
+                        {{--<div class="loading" id="wartingdiv" style="display: none;">--}}
+                            {{--<img src="./order/image/loading.gif">--}}
+                            {{--加载中……--}}
+                        {{--</div>--}}
+                    <div id="frm_main" style="display: block;">
+                        <h1 class="title">
+                            <span class="page-ipt-nick"></span>
+                            <span id="index"></span>/
+                            <span id="totalcount"></span>&nbsp
+                            <span class="main-box-nick"></span>
+                        </h1>
+                        <div class="xuanxiang"></div>
+                        <div class="lx_item">
+                            <ul id="ul_answers" style="font-size:27px;"></ul>
                         </div>
-
-                        <div id="frm_main" style="display: block;">
-                            <h1 class="title">
-                                <span class="page-ipt-nick"></span>
-                                <span id="index"></span>/ <span id="totalcount"></span>
-                                &nbsp<span id="t" class="main-box-nick"></span>
-                            </h1>
-                            <div class="xuanxiang">
-
-                            </div>
-                            <div class="lx_item">
-                                <ul id="ul_answers" style="font-size:27px;">
-                                </ul>
-                                <div class="right" id='qustionpic'></div>
-                            </div>
-                            <div class="btns">
-                                <button class="next-btn" data-page="next">下一题</button>
-                                <a href="javascript:void(0)" class="inp sp" id="sp_lxindex" style="display:none">2/1334</a>
-                                <button class="prev-btn" data-page="prev">上一题</button>
-                                <a href="javascript:void(0)" class="btn grey" id="btn_jieshi">显示本题解释</a>
-                                <a href="javascript:void(0)" class="btn grey" id="btn_teiba" style="">显示本题讨论</a>
-                                <a href="javascript:void(0)" class="btn grey" id="btn_datika" style="">显示答题卡</a>
-                            </div>
-                            <div class="info">
-                                <span><img src="/image/false.jpg" style="width:15px" onclick="checkGo(this)" id="checkgo"><label for="AutoNextTmp" title="正确答题后跳转到下一题">自动跳转至下一题</label></span>
-                                <span>答对：<font id="TrueNum">0</font> 题</span>
-                                <span>答错:<font id="FalseNum">0</font> 题</span>
-                                <span>正确率：<font id="TruePre" data="1">0.00%</font></span>
-                            </div>
-                            <div class="num-box-nick" style="display: none;"></div>
-                            <div class="jie-box" style="display: none;">
-                                <font style="font-size:25px;">试题详解</font>
-                                <hr style="border:0.2px solid lightgray">
-                                <div class="jieshi-box"></div>
-                            </div>
+                        <div class="btns">
+                            <button class="next-btn" data-page="next">下一题</button>
+                            <button class="prev-btn" data-page="prev">上一题</button>
+                            <a href="javascript:void(0)" class="btn grey" id="btn_jieshi">显示本题解释</a>
+                            <a href="javascript:void(0)" class="btn grey" id="btn_teiba">显示本题讨论</a>
+                            <a href="javascript:void(0)" class="btn grey" id="btn_datika">显示答题卡</a>
+                        </div>
+                        <div class="info">
+                            <span><img src="/image/false.jpg" style="width:15px" onclick="checkGo(this)" id="checkgo"><label for="AutoNextTmp" title="正确答题后跳转到下一题">自动跳转至下一题</label></span>
+                            <span>答对：<font id="TrueNum">0</font> 题</span>
+                            <span>答错:<font id="FalseNum">0</font> 题</span>
+                            <span>正确率：<font id="TruePre" data="1">0.00%</font></span>
+                        </div>
+                        <div class="num-box-nick" style="display: none;"></div>
+                        <div class="jie-box" style="display: none;">
+                            <font style="font-size:25px;">试题详解</font>
+                            <hr style="border:0.2px solid lightgray">
+                            <div class="jieshi-box"></div>
+                        </div>
+                        <div class="comment_parent" style="display: none;">
                             <font style="font-size:25px;">我来分析</font>
                             <hr style="border:0.2px solid lightgray">
                         </div>
@@ -105,11 +99,19 @@
             </div>
         </div>
     </div>
-    </div>
 </body>
 </html>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+
+    $("#btn_teiba").click(function(){
+        if($('.comment_parent').css('display') == 'none')
+        {
+            $('.comment_parent').css('display','block');
+        }else{
+            $('.comment_parent').css('display','none');
+        }
+    });
 
     $("#btn_jieshi").click(function(){
         if($('.jie-box').eq(0).css('display') == 'none')
