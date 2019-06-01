@@ -27,3 +27,21 @@ Route::post('register/name','LoginController@username');
 
 Route::view('logins','login');
 Route::view('register','register');
+
+
+Route::get('question/questList',"QuestionController@questList");
+
+Route::get('question/addQuest',"QuestionController@addQuest");
+
+Route::post('question/questAdd',"QuestionController@questAdd");
+
+Route::get('question/updQuest',"QuestionController@updQuest");
+
+Route::post('question/questUpd',"QuestionController@questUpd");
+
+Route::get('question/questDel',"QuestionController@questDel");
+Route::post('question/upload',"QuestionController@upload");
+
+Route::get('question/keche',"QuestionController@keche");
+Route::get('question/huoche',"QuestionController@huoche");
+Route::get('question/motuo',"QuestionController@motuo");

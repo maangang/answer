@@ -53,7 +53,7 @@ class QuestionController extends Controller
     //渲染添加页面
     public function addQuest()
     {
-        return view('addquest');
+        return view('admin.addquest');
     }
     //处理添加数据
     public function questAdd()
@@ -67,7 +67,7 @@ class QuestionController extends Controller
     {
         $model = new QuestionModel();
         $data = $model->updQuest();
-        return view('updquest',['data'=>$data]);
+        return view('admin.updquest',['data'=>$data]);
     }
     //处理修改数据
     public function questUpd()
@@ -97,7 +97,7 @@ class QuestionController extends Controller
 
             $oss = new OssClient();
 
-            $res = $oss->uploadFile('haoying', $filename, $filePath);
+            $res = $oss->uploadFile('tpsc-s/upload', $filename, $filePath);
 
             $path = $res['info']['url'];
 
