@@ -18,3 +18,12 @@ Route::get('examList','Exam@examList');
 Route::get('cheType','Exam@cheType');
 Route::get('getOrder','Exam@getOrder');
 Route::view('orders','order');
+
+
+Route::post('login_do','LoginController@login_do');
+Route::post('register/add','LoginController@insert');
+Route::post('register/name','LoginController@username');
+//Route::post('logout','LoginController@logout');
+
+Route::view('logins','login');
+Route::view('register','register');

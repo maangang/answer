@@ -66,26 +66,29 @@
                             <span id="index"></span>/
                             <span id="totalcount"></span>&nbsp
                             <span class="main-box-nick"></span>
+
                         </h1>
+                        <button class="btn-shoucang " ref="shoucang" style="margin-right:20px;">收藏</button>
                         <div class="xuanxiang"></div>
                         <div class="lx_item">
                             <ul id="ul_answers" style="font-size:27px;"></ul>
                         </div>
+
                         <div class="btns">
                             <button class="next-btn" data-page="next">下一题</button>
                             <button class="prev-btn" data-page="prev">上一题</button>
                             <a href="javascript:void(0)" class="btn grey" id="btn_jieshi">显示本题解释</a>
-                            <a href="javascript:void(0)" class="btn grey" id="btn_teiba">显示本题讨论</a>
+                            <a href="javascript:void(0)" class="btn grey" id="btn_commit">显示本题讨论</a>
                             <a href="javascript:void(0)" class="btn grey" id="btn_datika">显示答题卡</a>
                         </div>
                         <div class="info">
                             <span><img src="/image/false.jpg" style="width:15px" onclick="checkGo(this)" id="checkgo"><label for="AutoNextTmp" title="正确答题后跳转到下一题">自动跳转至下一题</label></span>
-                            <span>答对：<font id="TrueNum">0</font> 题</span>
-                            <span>答错:<font id="FalseNum">0</font> 题</span>
+                            <span>答对: <font id="TrueNum" style="color:green;">0</font> 题</span>
+                            <span>答错: <font id="FalseNum" style="color:red;">0</font> 题</span>
                             <span>正确率：<font id="TruePre" data="1">0.00%</font></span>
                         </div>
                         <div class="num-box-nick" style="display: none;"></div>
-                        <div class="jie-box" style="display: none;">
+                        <div class="jie-parent" style="display: none;">
                             <font style="font-size:25px;">试题详解</font>
                             <hr style="border:0.2px solid lightgray">
                             <div class="jieshi-box"></div>
@@ -103,8 +106,8 @@
 </html>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-
-    $("#btn_teiba").click(function(){
+    //评论
+    $("#btn_commit").click(function(){
         if($('.comment_parent').css('display') == 'none')
         {
             $('.comment_parent').css('display','block');
@@ -112,17 +115,17 @@
             $('.comment_parent').css('display','none');
         }
     });
-
+    //解释
     $("#btn_jieshi").click(function(){
-        if($('.jie-box').eq(0).css('display') == 'none')
+        if($('.jie-parent').eq(0).css('display') == 'none')
         {
-            $('.jie-box').eq(0).css('display','block');
+            $('.jie-parent').eq(0).css('display','block');
         }else{
-            $('.jie-box').eq(0).css('display','none');
+            $('.jie-parent').eq(0).css('display','none');
         }
 
     });
-
+    //答题卡
     $("#btn_datika").click(function(){
         if($('.num-box-nick').css('display') == 'none')
         {
@@ -132,6 +135,16 @@
         }
 
     });
+    //自动跳转下一题
+    function checkGo(obj) {
+        if( $(obj).attr('src') == '/image/false.jpg' )
+        {
+            $(obj).attr('src','/image/true.jpg');
+        }else{
+            $(obj).attr('src','/image/false.jpg');
+        }
+    }
+
     var exam_arr = {};
     //选项点击事件
     function showCss(obj) {
@@ -167,19 +180,6 @@
                         $(this).addClass('green');
                     }
                 })
-                 /*if($("#checkgo").attr('src') == '/image/true.jpg')
-        {
-            //goPage(Number($(".page-ipt-nick").eq(0).text())+1);
-            paginationNick({
-                paginationBox:'box-nick',//分页容器--必填
-                mainBox:'main-box-nick',//内容盒子--必填
-                numBtnBox:'num-box-nick',//数字按钮盒子-- 必填
-                btnBox:'btn-box-nick',//按钮盒子 --必填
-                ipt:'page-ipt-nick',//input class-- 必填
-                goBtn:'go-btn-nick',//go btn class --必填
-                currentBtn:'active-nick'//当前按钮class name --必填
-            });
-        }*/
 
             }else{
                 error = $(obj).parent('li').attr('data-a-label');
@@ -207,21 +207,12 @@
         }
     }
 
-    function checkGo(obj)
-    {
-        if( $(obj).attr('src') == '/image/false.jpg' )
-        {
-            $(obj).attr('src','/image/true.jpg');
-        }else{
-            $(obj).attr('src','/image/false.jpg');
-        }
-    }
 
 
-    //        定义一个分页方法，可多次调用
+    //定义一个分页方法，可多次调用
    function paginationNick(opt){
 
-//            参数设置
+        //参数设置
         var pager={
             paginationBox:'',//分页容器-- 必填
             mainBox:'',//内容盒子--必填
@@ -237,12 +228,12 @@
             data:[]//ajax请求的数据
         };
         pager = $.extend(pager,opt);//用于合并对象
-        var flag = true;
+        var flag = true;//用于判断是否调用存储答题卡函数
 
         //请求数据页面跳转方法
         function goPage(btn){
             //obj为ajax请求数据
-            var scoreObject = eval('{{$data}}'.replace(/&quot;/g,'"'));
+            var scoreObject = eval('{{$data}}'.replace(/&quot;/g,'"'));//将json转成js对象
             var obj={other:{},value:scoreObject};
 
             //将展示的数据赋值给pager.data  (array)
@@ -282,16 +273,15 @@
                 getNumBtn(pager.currentPage);
             }
             //赋值给页码跳转输入框的value，表示当前页码
-            $('.'+pager.btnBox).val(pager.currentPage+1);
-            $(' .'+pager.ipt).text(pager.currentPage+1);
-
-            $("#totalcount").text(pager.maxCount);
+            $('.'+pager.btnBox).val(pager.currentPage+1);//最大div
+            $(' .'+pager.ipt).text(pager.currentPage+1); //显示当前页码
+            $("#totalcount").text(pager.maxCount);//显示总页码
             //内容区填充数据
             var arr=[],str='',xuanxiang='';
             arr=pager.data.slice(pager.pageCount*pager.currentPage,
                 pager.data.length - pager.pageCount*(pager.currentPage+1) > -1 ?
                     pager.pageCount*(pager.currentPage+1) : pager.data.length);
-            var exam_correct = "";
+            var exam_correct = "";//正确答案
             var explain = "";
             arr.forEach(function(v){
                 str+='<span>'+v.title+'</span>';
@@ -302,13 +292,13 @@
                 xuanxiang += '<li data-a-label="C"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;C、'+v.option_c+'</li>\n';
                 xuanxiang += '<li data-a-label="D"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;D、'+v.option_d+'</li>';
             });
-            $(".jieshi-box").html(explain);
-            $("#ul_answers").html(xuanxiang);
+            $(".jieshi-box").html(explain);//解释内容
+            $("#ul_answers").html(xuanxiang);//展示选项
             $('.'+pager.mainBox).html(str);
 
             $("#ul_answers").children('li').each(function(k,v){
-                if($(v).attr('data-a-label')==exam_correct) $(this).attr('class','success');
-                if($(v).text().length <= 2 )$(this).hide();
+                if($(v).attr('data-a-label')==exam_correct) $(this).attr('class','success');//正确值得默认classname
+                if($(v).text().length <= 2 )$(this).hide();//当选项里面没有内容不展示
             });
 
             for(var r in exam_arr)

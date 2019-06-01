@@ -3,171 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <title>pagination-nick</title>
-    <link rel="stylesheet" href="./css/jx_index.css">{{--导航栏VIP命题--}}
+    <link rel="stylesheet" href="./css/jx_index.css">
+    {{--导航栏VIP命题--}}
     <style>
-        button{
-            padding:5px;
-            margin:5px;
-        }
-        .active-nick{
-            color:red;
-        }
-        input{
-            width:50px;
-            text-align:center;
+        .boxx{
+            margin:0 auto;
+            width:865px;
         }
     </style>
 </head>
+<link href="http://www.jiakaobaodian.com/core-assets/jiakao/application/mnks/kemu1-4/css/main.css?v=1.0.8" rel="stylesheet" type="text/css">
 <body>
-<!--小车考试-->
-<div class="car_s_exam">
+<!-- <div class="pagination-nick"></div> -->
+<div class="boxx">
+    <div class="layout-article" ref="comMain" data-dom-ready data-sp="0.6">
+        <div class="container news-page">
+            <div class="frame-l-r">
+                <div class="left">
+                    <div class="header">
+                        <h1>秋名山--2019 “科目一，考试”</h1>
+                        <h2>科目一，又称科目一理论考试、驾驶员理论考试，是机动车驾驶证考核的一部分 。根据《机动车驾驶证申领和使用规定》，考试内容包括驾车理论基础、道路安全法律法规、地方性法规等相关知识。考试形式为上机考试，100道题，90分及以上过关。</h2>
+                    </div>
 
-    <div class="car_s_exam_context">
-        <div class="title">小车理论考试</div>
-        <div class="exam_card">
-            <div class="exam_card_header">
-                科目一交规
-            </div>
-            <div class="exam_card_body">
-                <div>
-                    <a href="{{url('orders')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SSLX')"><span>顺序练习</span></a>
-                    <a href="{{url('getOrder')}}" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_SJLX')"><span>随机练习</span></a>
-                </div>
-                <div>
-                    <a href="http://mnks.jxedt.com/ckm1/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_ZXLX')"><span>专项练习</span></a>
-                    <a href="http://mnks.jxedt.com/ckm1/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_CTLX')"><span>错题练习</span></a>
-                </div>
-            </div>
-            <div class="exam_card_footer">
-<span>
-<a href="http://mnks.jxedt.com/ckm1/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM1_MNLX')">
-模拟考试
-</a>
-</span>
+                    <div class="com-tiku-menu" data-dom-ready data-sp="0.26">
+                        <ul class="menu-list clearfix">
+                            <li>
+                                <a target="_blank" href="/mnks/exercise/0-car-kemu1.html" class="icon0">顺序练习</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="/mnks/exercise/3-car-kemu1.html" class="icon1">随机练习</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="/mnks/chapter/car-kemu1-beijing.html" class="icon2">章节练习</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="/mnks/strengthen/car-kemu1-beijing.html" class="icon3">专项练习</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="/mnks/exercise/8-car-kemu1.html" class="icon4">难题练习</a>
+                            </li>
+                            <li>
+                                <a target="_blank" href="http://www.jiakaobaodian.com/mnks/exam/car-kemu1-beijing.html" class="icon5">全真模拟</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="com-mnks-course-statis com-part block-static" data-dom-ready data-sp="0.35">
+                        <h3 class="part-title">小车科目一练习及考试统计</h3>
+                        <div class="content-wapper cl">
+                            <div id="holder" class="s-circle fl">
+                                <label></label>
+                                <i></i>
+                            </div>
 
+                            <div class="s-info fl">
+                                <p class="p1 cl">
+                                    <span class="i0 ii"></span>
+                                    <span class="n1">做对题</span>
+                                    <span class="n2">占比%</span>
+                                </p>
+                                <p class="p2 cl">
+                                    <span class="i1 ii"></span>
+                                    <span class="n1">做错题</span>
+                                    <span class="n2">占比%</span>
+                                </p>
+                                <p class="p3 cl">
+                                    <span class="i2 ii"></span>
+                                    <span class="n1">未做题</span>
+                                    <span class="n2">占比%</span>
+                                </p>
+                            </div>
 
-            </div>
-        </div>
-        <div class="exam_card">
-            <div class="exam_card_header">
-                科目四安全文明驾驶
-            </div>
-            <div class="exam_card_body">
-                <div>
-                    <a href="http://mnks.jxedt.com/ckm4/sxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SSLX')"><span>顺序练习</span></a>
-                    <a href="http://mnks.jxedt.com/ckm4/sjlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_SJLX')"><span>随机练习</span></a>
+                            <div class="s-link fr cl">
+                                <a class="favor fl" data-action="login_url" target="_blank" rel="nofollow" ref="loginBtn">我的收藏</a>
+                                <a class="record fl" data-action="login_url" target="_blank" rel="nofollow" ref="loginBtn">考试记录</a>
+                                <a class="rank fl" target="_blank" rel="nofollow" href="/mnks/rank/car-kemu1-beijing.html">排行榜</a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <div>
-                    <a href="http://mnks.jxedt.com/ckm4/zxlx/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_ZXLX')"><span>专项练习</span></a>
-                    <a href="http://mnks.jxedt.com/ckm4/wdct/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_CTLX')"><span>错题练习</span></a>
-                </div>
-            </div>
-            <div class="exam_card_footer">
-                <span><a href="http://mnks.jxedt.com/ckm4/mnks/" target="_blank" onclick="clickLog('from=JXEDT_HOME_LLKS_KM4_MNLX')">模拟考试</a></span>
             </div>
         </div>
     </div>
 </div>
-
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
-<script>
-    //        定义一个分页方法，可多次调用
-    function paginationNick(opt){
-//            参数设置
-        var pager={
-            paginationBox:'',//分页容器-- 必填
-            mainBox:'',//内容盒子--必填
-            numBtnBox:'',//数字按钮盒子-- 必填
-            btnBox:'',//按钮盒子 --必填
-            ipt:'',//input class-- 必填
-            goBtn:'',//go btn class --必填
-            currentBtn:'',//当前按钮class name --必填
-            pageCount:1,//每页显示几条数据
-            numBtnCount:3,//当前页左右两边各多少个数字按钮
-            currentPage:0,//当前页码data-page，首屏默认值
-            maxCount:0,//ajax请求数据分成的最大页码
-            data:[]//ajax请求的数据
-        };
-        pager = $.extend(pager,opt);//用于合并对象
-
-        //请求数据页面跳转方法
-        function goPage(btn){
-            //obj为ajax请求数据
-            var obj={other:{},value:[11,22,33,44,55,66,77,88,99,0,11,22,33,44,55,66,77,88,99,0,11,22,33,44,55,66,77,88,99,0,11,22,33,44,55,66,77,88,99,0]};
-            //将展示的数据赋值给pager.data  (array)
-            pager.data=obj.value;
-            //设置ajax请求数据分成的最大页码
-            pager.maxCount=pager.data.length % pager.pageCount ? parseInt(pager.data.length / pager.pageCount) +1 :
-                pager.data.length / pager.pageCount;
-
-//                设置当前页码
-            if(!isNaN(btn)){//数字按钮
-                pager.currentPage=parseInt(btn);
-            }else{
-                switch(btn){
-                    case 'first':
-                        pager.currentPage=0;
-                        break;
-                    case 'prev':
-                        if(pager.currentPage>0){
-                            --pager.currentPage;
-                        }
-                        break;
-                    case 'next':
-                        if(pager.currentPage+1<pager.maxCount){
-                            ++pager.currentPage;
-                        }
-                        break;
-                    case 'last':
-
-                        pager.currentPage=pager.maxCount-1;
-                        break;
-                }
-            }
-            //创建数字按钮
-            //createNumBtn(pager.currentPage);
-            //赋值给页码跳转输入框的value，表示当前页码
-            $('.'+pager.btnBox+' .'+pager.ipt).val(pager.currentPage+1);
-//              内容区填充数据
-            var arr=[],str='';
-            arr=pager.data.slice(pager.pageCount*pager.currentPage,
-                pager.data.length - pager.pageCount*(pager.currentPage+1) > -1 ?
-                    pager.pageCount*(pager.currentPage+1) : pager.data.length);
-            arr.forEach(function(v){
-                str+='<div>'+v+'</div>';
-            });
-            $('.'+pager.mainBox).html(str);
-        }
-
-        //创建非数字按钮和数据内容区
-        function createOtherBtn(){
-            $('.'+pager.paginationBox).html('<div class="'+pager.btnBox+'"><button data-page="first" class="first-btn">首页</button><button data-page="prev" class="prev-btn">上一页</button><span class="'+pager.numBtnBox+'"></span><button data-page="next" class="next-btn">下一页</button><input type="text" placeholder="请输入页码" class="'+pager.ipt+'"><button class="'+pager.goBtn+'">确定go</button><button data-page="last" class="last-btn">尾页</button></div><div class="'+pager.mainBox+'"></div>');
-
-            //每个btn绑定请求数据页面跳转方法
-            $('.'+pager.btnBox+' button').each(function(i,v){
-                $(this).click(function(){
-                    //有值且不是上一次的页码时才调用
-                    if(v.getAttribute('data-page') && v.getAttribute('data-page') != pager.currentPage){
-                        goPage(v.getAttribute('data-page'));
-                    }
-                });
-            });
-        }
-
-        //首屏加载
-        createOtherBtn();//首屏加载一次非数字按钮即可
-        goPage();//请求数据页面跳转满足条件按钮点击都执行，首屏默认跳转到currentPage
-    }
-    //调用
-    paginationNick({
-        paginationBox:'pagination-nick',//分页容器--必填
-        mainBox:'main-box-nick',//内容盒子--必填
-        numBtnBox:'num-box-nick',//数字按钮盒子-- 必填
-        btnBox:'btn-box-nick',//按钮盒子 --必填
-        ipt:'page-ipt-nick',//input class-- 必填
-        goBtn:'go-btn-nick',//go btn class --必填
-        currentBtn:'active-nick'//当前按钮class name --必填
-    });
-</script>
-</body>
-</html>
