@@ -26,11 +26,10 @@ Route::get('textTopic','Exam@textTopic');
 Route::get('do_collect','Exam@do_collect');
 Route::get('examList','Exam@examList');
 Route::get('cheType','Exam@cheType');
-
+Route::get('mistakes','Exam@mistakes');
 
 Route::get('ranking','User@ranking');
 Route::get('collect','User@collect');
-Route::get('mistakes','User@mistakes');
 Route::post('collectAdd','User@collectAdd');
 
 Route::post('login_do','LoginController@login_do');
