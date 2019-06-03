@@ -32,4 +32,8 @@ class LoginController extends Controller
         return $model->insert($fileObj,$name,$pwd);
     }
 
+    public function logout(Request $request){
+        $request->session()->flush();
+    }
+
 }

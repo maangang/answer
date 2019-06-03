@@ -70,7 +70,7 @@
   </div>
 </div>
 <div class="footer">北京市，亮亮职业驾校有限公司</div>
-<script src="jquery-1.11.1.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 var namez = /^[\w\u4e00-\u9fa5]{2,6}$/;
 function names_s(){

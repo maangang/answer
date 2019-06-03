@@ -12,20 +12,31 @@ use Illuminate\Http\Request;
 
 class Exam
 {
-    public function index()
+    public function order_template($che_type,$course_type)
     {
-        $data = DB::table('dolly_exam')->get();
-        var_dump($data);
-    }
-    public function setCourse_typeAttr($val){
-        return '213'.$val;
-    }
+        if($che_type == '小车') $table  = "dolly_exam";
+        if($che_type == '客车') $table  = "carriage_exam";
+        if($che_type == '货车') $table  = "truck_exam";
+        if($che_type == '摩托车') $table = "motorcycle_exam";
 
-    public function getOrder()
-    {
-        $data = DB::table('dolly_exam')->get()->map(function ($value) {
-        return (array)$value;
-        })->toArray();
+        $data = DB::table($table)->where(['course_type'=>$course_type])->get()->map(function ($value) {return (array)$value;})->toArray();
         return $data;
     }
+
+    public function random_template($che_type,$course_type)
+    {
+        if($che_type == '小车') $table  = "dolly_exam";
+        if($che_type == '客车') $table  = "carriage_exam";
+        if($che_type == '货车') $table  = "truck_exam";
+        if($che_type == '摩托车') $table = "motorcycle_exam";
+
+        $data = DB::table($table)->where(['course_type'=>$course_type])->get()->map(function ($value) {return (array)$value;})->toArray();
+        return $data;
+    }
+
+    public function do_collect()
+    {
+        DB::table('collect');
+    }
+
 }

@@ -1,19 +1,17 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="baidu-site-verification" content="QXVdEdBQhU">
-    <link rel="canonical" href="http://mnks.jxedt.com/ckm1/sxlx/">
-    <link rel="shortcut icon" type="image/x-icon" href="http://img.58cdn.com.cn/jxedt/logos/favicon.ico">
-    <title>【驾校一点通官网】一点通驾校模拟考试_学车理论考试试题_驾驶员考试科目一</title>
-    <link rel="shortcut icon" type="image/x-icon" href="http://img.58cdn.com.cn/jxedt/logos/favicon.ico">
-    <meta name="mobile-agent" content="format=xhtml; url=http://m.jxedt.com/mnks/ckm1/sxlx/">
-    <meta name="mobile-agent" content="format=html5; url=http://m.jxedt.com/mnks/ckm1/sxlx/">
-    <meta name="mobile-agent" content="format=wml; url=http://m.jxedt.com/mnks/ckm1/sxlx/">
-
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
 </head>
-
-<link href="./order/css/main.css" type="text/css" rel="stylesheet">
+<style>
+    .options-w.left p img{
+        width:23px;
+    }
+</style>
 <style>
     .jieshi-box{
         color : rgb(178 157 119);
@@ -22,7 +20,7 @@
         margin-bottom : 10px;
         height:100px;
     }
-    #ul_answers li img{
+    #ul_answers p img{
         width:23px;
     }
     .num-box-nick button{
@@ -42,135 +40,83 @@
         background-color:#DC143C;
     }
 </style>
-
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<link href="/moni/main.css" rel="stylesheet" type="text/css">
 <body>
-<div class="nav main">
-    <a href="http://answer.com/">首页</a> &gt;
-    <a href="http://answer.com/select_type?course_type={{$course_type}}&che_type={{$che_type}}">{{$course_type}}{{$che_type}}</a> &gt;
-    <a href="http://answer.com/order_template?che_type={{$che_type}}&course_type={{$course_type}}">顺序练习</a>
-</div>
-
-<div class="btn-box-nick" style="width:1190px;height:40px ;margin:10px auto">
-    <div class="lx main">
-        <div class="main_title">顺序练习<span>车型：{{$che_type}}</span><span>科目：{{$course_type}}</span><span></span></div>
-        <div class="examone lx_box" id="main_M">
-            <div class="" style="display: block;">单选题</div>
-            <div class="box">
-                {{--<div class="loading" id="wartingdiv" style="display: none;">--}}
-                {{--<img src="./order/image/loading.gif">--}}
-                {{--加载中……--}}
-                {{--</div>--}}
-                <div id="frm_main" style="display: block;">
-                    <button class="btn-shoucang" ref="shoucang" style="margin-left:0px;"><img src="/image/xing.gif" style="width:15px;">收藏</button>
-                    <h1 class="title">
-                        <span class="page-ipt-nick"></span>
-                        <span id="index"></span>/
-                        <span id="totalcount"></span>&nbsp
-                        <span class="main-box-nick"></span>
-                    </h1>
-
-                    <div class="xuanxiang"></div>
-                    <div class="lx_item">
-                        <ul id="ul_answers" style="font-size:27px;"></ul>
-                    </div>
-
-                    <div class="btns">
-                        <button class="next-btn" data-page="next">下一题</button>
-                        <button class="prev-btn" data-page="prev">上一题</button>
-                        <a href="javascript:void(0)" class="btn grey" id="btn_jieshi">显示本题解释</a>
-                        <a href="javascript:void(0)" class="btn grey" id="btn_commit">显示本题讨论</a>
-                        <a href="javascript:void(0)" class="btn grey" id="btn_datika">显示答题卡</a>
-                    </div>
-                    <div class="info">
-                        <span><img src="/image/false.jpg" style="width:15px" onclick="checkGo(this)" id="checkgo"><label for="AutoNextTmp" title="正确答题后跳转到下一题">自动跳转至下一题</label></span>
-                        <span>答对: <font id="TrueNum" style="color:green;">0</font> 题</span>
-                        <span>答错: <font id="FalseNum" style="color:red;">0</font> 题</span>
-                        <span>正确率：<font id="TruePre" data="1">0.00%</font></span>
-                    </div>
-                    <div class="num-box-nick" style="display: none;"></div>
-                    <div class="jie-parent" style="display: none;">
-                        <font style="font-size:25px;">试题详解</font>
-                        <hr style="border:0.2px solid lightgray">
-                        <div class="jieshi-box"></div>
-                    </div>
-                    <div class="comment_parent" style="display: none;">
-                        <font style="font-size:25px;">我来分析</font>
-                        <hr style="border:0.2px solid lightgray">
+<div class="btn-box-nick">
+    <div class="box">
+<div class="layout-article" ref="comMain" data-sp="0.6">
+    <div class="container news-page">
+        <div class="exam">
+            <div class="row clearfix">
+                <div class="col col1">
+                    <fieldset class="kaochang">
+                        <legend>理论考试</legend>
+                        <span>第01考台</span>
+                    </fieldset>
+                    <fieldset class="kaosheng">
+                        <legend>考生信息</legend>
+                        <div class="author-img"></div>
+                        <div class="kaosheng-item kemu red">科目一</div>
+                        {{--<div class="kaosheng-item name">考生姓名：<span>//Session::get('name')</span></div>--}}
+                        <div class="kaosheng-item">考试题数：100</div>
+                        <div class="kaosheng-item">考试时间：45分钟</div>
+                        <div class="kaosheng-item">满分100分，90分及格</div>
+                    </fieldset>
+                    <fieldset class="daojishi">
+                        <legend>剩余时间</legend>
+                        <span class="djs">43:04</span>
+                    </fieldset>
+                </div>
+                <div class="col col2">
+                    <fieldset class="kaoti">
+                        <legend>考试题目</legend>
+                        <div data-sp="0.26" class="com-mnks-question-detail">
+                            <div class="detail-content" id="ComQuestionInfo_qundefined">
+                                <div class="page-ipt-nick"></div>
+                                <div class="timu">
+                                    {{--<p>1、开启前照灯远光时仪表板上（如图所示）亮起。</p>--}}
+                                </div>
+                                <div class="answer-w clearfix">
+                                    <div class="options-w left"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <div class="kaoti-bar clearfix">
+                        <fieldset class="tishi">
+                            <legend>试题提示信息</legend>
+                            <span>判断题，请判断对错</span>
+                        </fieldset>
+                        <div class="btns">
+                            <button class="next-btn" data-page="next">下一题</button>
+                            <button class="prev-btn" data-page="prev">上一题</button>
+                            <button class="submit" ref="submit">交卷</button>
+                        </div>
 
                     </div>
                 </div>
+
+
+                <div class="col col3">
+                    <div class="datika">
+                        <div class="num-box-nick" style="display: none;"></div>
+                    </div>
+                </div>
             </div>
+            <fieldset class="tishi-img">
+                <legend>图片信息</legend>
+                <div class="media-w">
+                    <img src="https://jiakao-tiku.image.mucang.cn/tiku/res/889600.jpg" alt="开启前照灯远光时仪表板上（如图所示）亮起。" ref="bigImg">
+                </div>
+            </fieldset>
         </div>
     </div>
 </div>
+</div>
+</div>
 </body>
-</html>
-<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
-
-    $(".btn-shoucang").click(function(){
-        var collect = "";
-        if( $(this).children('img').attr('src') == '/image/xing.gif' )
-        {
-            $(this).children('img').attr('src','/image/xingxing.png');
-            collect = "收藏";
-        }else{
-            $(this).children('img').attr('src','/image/xing.gif');
-            collect = "取消收藏";
-        }
-
-        $.ajax({
-            type : "get",
-            url  : "",
-            data : {
-                'collect' : collect,
-                'exam_id' : $(".exam_id").val(),
-            },
-            success:function()
-            {
-
-            }
-        })
-    });
-
-    //评论
-    $("#btn_commit").click(function(){
-        if($('.comment_parent').css('display') == 'none')
-        {
-            $('.comment_parent').css('display','block');
-        }else{
-            $('.comment_parent').css('display','none');
-        }
-    });
-    //解释
-    $("#btn_jieshi").click(function(){
-        if($('.jie-parent').eq(0).css('display') == 'none')
-        {
-            $('.jie-parent').eq(0).css('display','block');
-        }else{
-            $('.jie-parent').eq(0).css('display','none');
-        }
-
-    });
-    //答题卡
-    $("#btn_datika").click(function(){
-        if($('.num-box-nick').css('display') == 'none')
-        {
-            $('.num-box-nick').css('display','block');
-        }else{
-            $('.num-box-nick').css('display','none');
-        }
-
-    });
-    //自动跳转下一题
-    function checkGo(obj) {
-        if( $(obj).attr('src') == '/image/false.jpg' )
-        {
-            $(obj).attr('src','/image/true.jpg');
-        }else{
-            $(obj).attr('src','/image/false.jpg');
-        }
-    }
 
     var exam_arr = {};
     //选项点击事件
@@ -178,7 +124,8 @@
         var xuan = [];
         var success = "";
         var error = "";
-        $("#ul_answers img").each(function(k,v){
+
+        $(".options-w.left img").each(function(k,v){
             if($(v).attr('src') == "/image/true.jpg")
             {
                 xuan.push('false');
@@ -190,18 +137,13 @@
         if(xuan.indexOf('false') == -1)
         {
             obj.xuan = 2;
-            var count_accuracy = Number($("#TruePre").attr('data'));
-            var accuracy = '';
-            $("#TruePre").attr('data', count_accuracy+1);
-            if($(obj).parent('li').attr('class') == 'success')
+            if($(obj).parent('p').attr('class') == 'success')
             {
-                success = $(obj).parent('li').attr('data-a-label');
+                success = $(obj).parent('p').attr('data-a-label');
                 $(obj).attr('src','/image/true.jpg');
-                var data_success = Number($("#TrueNum").text())+1;
-                $("#TrueNum").text(data_success);
-                accuracy = data_success/count_accuracy%100;
-                $("#TruePre").text((accuracy*100).toFixed(2)+"%");
-                $(".num-box-nick button").each(function(k,v){
+
+                $(".datika button").each(function(k,v){
+                    console.log($(v))
                     if(Number($(v).text()) == Number($(".page-ipt-nick").eq(0).text()))
                     {
                         $(this).addClass('green');
@@ -209,21 +151,17 @@
                 })
 
             }else{
-                error = $(obj).parent('li').attr('data-a-label');
-                var data_error = Number($("#FalseNum").text())+1;
-                $("#FalseNum").text(data_error);
+                error = $(obj).parent('p').attr('data-a-label');
                 $(obj).attr('src','/image/ffalse.jpg');
-                var data_success = Number($("#TrueNum").text())
-                accuracy = data_success/count_accuracy%100;
-                $("#TruePre").text((accuracy*100).toFixed(2)+"%");
-                $("#ul_answers li").each(function(k,v){
+
+                $(".options-w.left p").each(function(k,v){
                     if($(v).attr('class') == 'success')
                     {
                         success = $(this).attr('data-a-label');
                         $(this).children('img').attr('src','/image/true.jpg');
                     }
                 });
-                $(".num-box-nick button").each(function(k,v){
+                $(".datika button").each(function(k,v){
                     if(Number($(v).text()) == Number($(".page-ipt-nick").eq(0).text()))
                     {
                         $(this).addClass('red');
@@ -314,17 +252,17 @@
                 str+='<span>'+v.title+'</span>';
                 exam_correct = v.exam_correct;
                 explain = v.explain;
-                xuanxiang += '<li data-a-label="A" class=""><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;A、'+v.option_a+'</a></li>\n';
-                xuanxiang += '<li data-a-label="B"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;B、'+v.option_b+'</li>\n';
-                xuanxiang += '<li data-a-label="C"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;C、'+v.option_c+'</li>\n';
-                xuanxiang += '<li data-a-label="D"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;D、'+v.option_d+'</li>';
+                xuanxiang += '<p data-a-label="A"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;A、'+v.option_a+'</p>\n';
+                xuanxiang += '<p data-a-label="B"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;B、'+v.option_b+'</p>\n';
+                xuanxiang += '<p data-a-label="C"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;C、'+v.option_c+'</p>\n';
+                xuanxiang += '<p data-a-label="D"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;D、'+v.option_d+'</p>';
                 xuanxiang += '<input type="hidden" class="exam_id" value="'+v.exam_id+'">';
             });
-            $(".jieshi-box").html(explain);//解释内容
-            $("#ul_answers").html(xuanxiang);//展示选项
+
+            $(".options-w.left").html(xuanxiang);//展示选项
             $('.'+pager.mainBox).html(str);
 
-            $("#ul_answers").children('li').each(function(k,v){
+            $(".options-w.left").children('p').each(function(k,v){
                 if($(v).attr('data-a-label')==exam_correct) $(this).attr('class','success');//正确值得默认classname
                 if($(v).text().length <= 2 )$(this).hide();//当选项里面没有内容不展示
             });
@@ -451,16 +389,7 @@
                     goPage(v.getAttribute('data-page'));
                 });
             });
-            //按钮禁用
-            /*$('.'+pager.btnBox+' button').not('.'+pager.currentBtn).attr('disabled',false);
-            if(!page){//首页时
-                $('.'+pager.btnBox+' .first-btn').attr('disabled',true);
-                $('.'+pager.btnBox+' .prev-btn').attr('disabled','disabled');
-            }
-            if(page==pager.maxCount-1){//尾页时
-                $('.'+pager.btnBox+' .last-btn').attr('disabled',true);
-                $('.'+pager.btnBox+' .next-btn').attr('disabled',true);
-            }*/
+
         }
 
 
@@ -486,10 +415,11 @@
     paginationNick({
         paginationBox:'box-nick',//分页容器--必填
         mainBox:'main-box-nick',//内容盒子--必填
-        numBtnBox:'num-box-nick',//数字按钮盒子-- 必填
+        numBtnBox:'datika',//数字按钮盒子-- 必填
         btnBox:'btn-box-nick',//按钮盒子 --必填
         ipt:'page-ipt-nick',//input class-- 必填
         goBtn:'go-btn-nick',//go btn class --必填
         currentBtn:'active-nick'//当前按钮class name --必填
     });
 </script>
+</html>

@@ -14,25 +14,40 @@ use App\Model\Exam as ExamModel;
 
 class Exam extends Controller
 {
-    public function examList()
+
+    public function order_template(Request $request)
     {
-        $ExamModel = new ExamModel;
-       //var_dump($ExamModel->index());
-        return view('examList');
+        $che_type    = $request->input('che_type');
+        $course_type = $request->input('course_type');
+        $model = new ExamModel;
+        $data = $model->order_template($che_type,$course_type);
+
+        return view('order',['data'=>trim(json_encode($data)),'che_type'=>$che_type,'course_type'=>$course_type]);
     }
 
-    public function cheType()
+    public function random_template(Request $request)
     {
-        $request = new Request;
-        $data = $request->all();
-        var_dump( $data);
+        $che_type    = $request->input('che_type');
+        $course_type = $request->input('course_type');
+        $model = new ExamModel;
+        $data = $model->random_template($che_type,$course_type);
+
+        return view('random',['data'=>trim(json_encode($data)),'che_type'=>$che_type,'course_type'=>$course_type]);
     }
 
-    public function getOrder()
+    public function simulation_template(Request $request)
     {
-        $ExamModel = new ExamModel;
-        $data = $ExamModel->getOrder();
-        //var_dump(trim(json_encode($data)));die;
-        return view('random',['data'=>trim(json_encode($data))]);
+        $che_type    = $request->input('che_type');
+        $course_type = $request->input('course_type');
+        $model = new ExamModel;
+        $data = $model->random_template($che_type,$course_type);
+
+        return view('simulation',['data'=>trim(json_encode($data))]);
+    }
+
+
+    public function do_collect(Request $request)
+    {
+
     }
 }

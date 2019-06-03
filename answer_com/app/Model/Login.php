@@ -37,14 +37,14 @@ class Login extends Model
     public function insert($fileObj,$name,$pwd){
 
         $remoteDir = config("filesystems.disks.oss.ad_upload_dir");
-        $res = $this->doUpload($fileObj,$remoteDir);
-        $img = $res['fileUrl'];
+        //$res = $this->doUpload($fileObj,$remoteDir);
+        //$img = $res['fileUrl'];
 
         $ress = DB::table("user")->insert(
             [
                 "user_name"	=> "$name",
                 "password"	=> "$pwd",
-                "img"		=> "$img"
+               // "img"		=> "$img"
             ]
         );
         if ($ress) {

@@ -14,16 +14,25 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::view('header','header');
+Route::get('select_type','IndexController@select_type');
+
+Route::get('order_template','Exam@order_template');
+Route::get('random_template','Exam@random_template');
+Route::get('simulation_template','Exam@simulation_template');
+
+Route::get('do_collect','Exam@do_collect');
 Route::get('examList','Exam@examList');
 Route::get('cheType','Exam@cheType');
-Route::get('getOrder','Exam@getOrder');
-Route::view('orders','order');
+
+
+Route::get('ranking','User@ranking');
 
 
 Route::post('login_do','LoginController@login_do');
 Route::post('register/add','LoginController@insert');
 Route::post('register/name','LoginController@username');
-//Route::post('logout','LoginController@logout');
+Route::get('logout','LoginController@logout');
 
 Route::view('logins','login');
 Route::view('register','register');

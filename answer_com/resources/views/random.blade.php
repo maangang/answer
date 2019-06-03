@@ -61,14 +61,14 @@
                             {{--加载中……--}}
                         {{--</div>--}}
                     <div id="frm_main" style="display: block;">
+                        <button class="btn-shoucang" ref="shoucang" style="margin-left:0px;"><img src="/image/xing.gif" style="width:15px;">收藏</button>
                         <h1 class="title">
                             <span class="page-ipt-nick"></span>
                             <span id="index"></span>/
                             <span id="totalcount"></span>&nbsp
                             <span class="main-box-nick"></span>
-
                         </h1>
-                        <button class="btn-shoucang " ref="shoucang" style="margin-right:20px;">收藏</button>
+
                         <div class="xuanxiang"></div>
                         <div class="lx_item">
                             <ul id="ul_answers" style="font-size:27px;"></ul>
@@ -96,6 +96,7 @@
                         <div class="comment_parent" style="display: none;">
                             <font style="font-size:25px;">我来分析</font>
                             <hr style="border:0.2px solid lightgray">
+
                         </div>
                     </div>
                 </div>
@@ -106,6 +107,32 @@
 </html>
 <script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+
+    $(".btn-shoucang").click(function(){
+        var collect = "";
+        if( $(this).children('img').attr('src') == '/image/xing.gif' )
+        {
+            $(this).children('img').attr('src','/image/xingxing.png');
+            collect = "收藏";
+        }else{
+            $(this).children('img').attr('src','/image/xing.gif');
+            collect = "取消收藏";
+        }
+
+        $.ajax({
+            type : "get",
+            url  : "",
+            data : {
+                'collect' : collect,
+                'exam_id' : $(".exam_id").val(),
+            },
+            success:function()
+            {
+
+            }
+        })
+    });
+
     //评论
     $("#btn_commit").click(function(){
         if($('.comment_parent').css('display') == 'none')
@@ -291,6 +318,7 @@
                 xuanxiang += '<li data-a-label="B"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;B、'+v.option_b+'</li>\n';
                 xuanxiang += '<li data-a-label="C"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;C、'+v.option_c+'</li>\n';
                 xuanxiang += '<li data-a-label="D"><img src="/image/false.jpg" onclick="showCss(this)"> &nbsp;D、'+v.option_d+'</li>';
+                xuanxiang += '<input type="hidden" class="exam_id" value="'+v.exam_id+'">';
             });
             $(".jieshi-box").html(explain);//解释内容
             $("#ul_answers").html(xuanxiang);//展示选项

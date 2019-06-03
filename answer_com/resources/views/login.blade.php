@@ -56,7 +56,7 @@
   </div>
 </div>
 <div class="footer">北京市，亮亮职业驾校有限公司</div>
-<script src="jquery-1.11.1.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
 function namess(){
   usernames = $("#names").val();
