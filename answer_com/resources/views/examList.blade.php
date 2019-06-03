@@ -43,10 +43,10 @@
                                 <a target="_blank" href="javascript:void(0);" class="icon2">章节练习</a>
                             </li>
                             <li>
-                                <a target="_blank" href="" class="icon3">专项练习</a>
+                                <a target="_blank" href="specials" class="icon3">专项练习</a>
                             </li>
                             <li>
-                                <a target="_blank" href="" class="icon4">难题练习</a>
+                                <a target="_blank" href="mistakes?che_type={{$data['che_type']}}&course_type={{$data['course_type']}}" class="icon4" rel="nofollow">难题练习</a>
                             </li>
                             <li>
                                 <a target="_blank" href="/simulation_template?che_type={{$data['che_type']}}&course_type={{$data['course_type']}}" class="icon5">全真模拟</a>
@@ -79,9 +79,9 @@
                             </div>
 
                             <div class="s-link fr cl">
-                                <a class="favor fl" data-action="login_url" target="_blank" rel="nofollow" ref="loginBtn">我的收藏</a>
+                                <a class="favor fl" data-action="login_url" target="_blank" rel="nofollow" href="collect">我的收藏</a>
                                 <a class="record fl" data-action="login_url" target="_blank" rel="nofollow" ref="loginBtn">考试记录</a>
-                                <a class="rank fl" target="_blank" rel="nofollow" href="ranking">排行榜</a>
+                                <a class="rank fl" target="_blank" rel="nofollow" href="ranking?che_type={{$data['che_type']}}&course_type={{$data['course_type']}}">排行榜</a>
                             </div>
                         </div>
                     </div>

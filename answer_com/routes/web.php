@@ -20,14 +20,18 @@ Route::get('select_type','IndexController@select_type');
 Route::get('order_template','Exam@order_template');
 Route::get('random_template','Exam@random_template');
 Route::get('simulation_template','Exam@simulation_template');
-
+Route::get('specials','Exam@special');
+Route::get('specials','Exam@special');
+Route::get('textTopic','Exam@textTopic');
 Route::get('do_collect','Exam@do_collect');
 Route::get('examList','Exam@examList');
 Route::get('cheType','Exam@cheType');
 
 
 Route::get('ranking','User@ranking');
-
+Route::get('collect','User@collect');
+Route::get('mistakes','User@mistakes');
+Route::post('collectAdd','User@collectAdd');
 
 Route::post('login_do','LoginController@login_do');
 Route::post('register/add','LoginController@insert');
